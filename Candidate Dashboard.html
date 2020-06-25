@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<!-- saved from url=(0214)https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Ascent">
+	<meta name="author" content="">
+
+	<link rel="icon" href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">
+
+	<title>Candidate Dashboard</title>
+	<link rel="shortcut icon" href="https://simplilearn.stohrm.com/images/icons/favicon.ico">
+	
+	<style>.file-input-wrapper { overflow: hidden; position: relative; cursor: pointer; z-index: 1; }.file-input-wrapper input[type=file], .file-input-wrapper input[type=file]:focus, .file-input-wrapper input[type=file]:hover { position: absolute; top: 0; left: 0; cursor: pointer; opacity: 0; filter: alpha(opacity=0); z-index: 99; outline: 0; }.file-input-name { margin-left: 8px; }</style><link rel="stylesheet" href="./Candidate Dashboard_files/bootstrap-wysihtml5.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/uikit.min.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/markdownarea.css">
+	
+	<link rel="stylesheet" href="./Candidate Dashboard_files/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/entypo.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/fonts.googleapis.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/bootstrap.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/neon-core.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/neon-theme.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/neon-forms.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/custom.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/blue.css">
+
+
+	<!-- Imported styles on this page -->
+	<link rel="stylesheet" href="./Candidate Dashboard_files/responsive-tables.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/select2-bootstrap.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/select2.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/jquery.selectBoxIt.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/daterangepicker-bs3.css">
+	<link rel="stylesheet" href="./Candidate Dashboard_files/font-awesome.min.css">
+	<script src="./Candidate Dashboard_files/jquery-1.11.3.min.js.download"></script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+		
+
+
+<script type="text/javascript">
+
+dateFormat =  'dd/mm/yyyy'
+
+$(document).ready(function(){
+
+	if($.isFunction($.fn.datepicker))
+	{
+		$(".datepicker").each(function(i, el)
+		{
+			var $this = $(el),
+				opts = {
+					format: attrDefault($this, 'format', dateFormat),
+					startDate: attrDefault($this, 'startDate', ''),
+					endDate: attrDefault($this, 'endDate', ''),
+					daysOfWeekDisabled: attrDefault($this, 'disabledDays', ''),
+					startView: attrDefault($this, 'startView', 0),
+					rtl: rtl(),
+					autoclose:true
+				},
+				$n = $this.next(),
+				$p = $this.prev();
+
+			$this.datepicker(opts);
+
+			
+		});
+	} 
+
+	$('#menu_search_box').keyup(function() {
+
+		var search_val =  $('#menu_search_box').val();
+		var url = 'ChalLrpEiG4nNwsDnWOJ2jCDgw5.cZJ2Ur5klx9vLUeD8imorP-cLoChX.NWUJhW8JkGDA3cvSxVI5NxlOMYvarLaRPTnHYJ8yt59q8j4g-uo7evqqRzIrC4pgOOU2.zwf6J10UHZfxOxyG6dFaFmQ__';
+		url = "index.php?"+url; 
+		$.ajax({
+			type: "POST",
+			data: {
+	        	ajax : "yes",
+	        	search_val : search_val,
+	            cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },    
+	    	url: url,
+	    	success: function(menu_list) {
+				$('#sidebar-menu').html(menu_list);
+				init_public_vars();
+				setup_sidebar_menu();
+				$('#sidebar-menu #main-menu').show();
+			}
+		});		
+		
+	});   
+});
+
+</script>
+</head>
+
+<body class="page-body  loaded">
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+
+
+	
+<div class="sidebar-menu">
+	<div class="sidebar-menu-inner">
+		<header class="logo-env">
+			<!-- logo -->
+			<div class="logo">
+				<img src="./Candidate Dashboard_files/stohrm_logo.png" alt="" width="90" class="img-responsive">
+			</div>
+			<!-- logo collapse icon -->
+			<div class="sidebar-collapse">
+				<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+					<i class="entypo-menu"></i>
+				</a>
+			</div>
+							
+			<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+			<div class="sidebar-mobile-menu visible-xs">
+				<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" class="with-animation"><!-- add class "with-animation" to support animation -->
+					<i class="entypo-menu"></i>
+				</a>
+			</div>
+		</header>
+		<div class="row" style="margin:0px 6px;">
+			<div class="col-md-12 ">
+				<div id="custom-search-input" style="padding:0px 10px 0px 6px;">
+					<div class="form-group">
+						<div class="input-group col-md-12">
+							<div class="input-group-addon">
+								<i class="entypo-search"></i>
+							</div>
+							<input type="search" id="menu_search_box" class="nav-search-menu-box form-control" placeholder="Search">
+						</div>
+					</div>
+                </div>
+	        </div>
+        </div>
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+					
+		</div>				
+		
+	</div>
+
+</div>
+	
+	<div class="main-content  ">	
+		<div class="row" style="background: #fff;">	
+			<div class="col-md-4 col-sm-4 col-xs-5 col-xxs-12 pageheader-left">	
+								<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">				
+												<img src="./Candidate Dashboard_files/simplilearn_logo.png" alt="" height="80" class="img-responsive">
+									</a>
+			</div>
+			<div class="col-md-8 col-sm-8 col-xs-7 col-xxs-12 pageheader-right">
+					<form action="https://simplilearn.stohrm.com/index.php?4lPeg8ZZa01m0kz5aaowU5RXYbufCsfEuPmuMDpN9hcm-.MMtf5tuU71fQKFGjUEIdlyiEWNcmFpKP8-WfWdNp5dW1YJbp0cQubsyxTdbqkyPwitTsvMgc55M24pzX5r" accept-charset="utf-8" name="change_role" id="change_role" method="post"><div style="display:none">
+<input type="hidden" name="cryptname" value="5bcebe96083ecaaf980bff1baacffbc8">
+</div>						<ul class="list-inline links-list pull-right" id="header_right_task_ul">
+							<!-- Multi Country Selection  starts-->
+													<!-- Multi Country Selection  ends-->
+							
+						
+							<li class="dropdown language-selector " style="padding-top: 15px;">
+								<div id="is_logged_in_txt" data-toggle="dropdown" class="link_class"><strong> Nihal Abdulla  </strong></div>
+								<span data-toggle="dropdown" class="link_class">Candidate</span>								<a aria-expanded="true" href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
+									<i class="fa fa-user fa-lg"></i>
+								</a>
+								<ul class="dropdown-menu pull-right role-switch_drp">
+									
+																				
+									<li> <a href="https://simplilearn.stohrm.com/index.php?W1ZY08w-CLmOOLgldF1b1J6s1oCtap1yuSEp.H5Vb74B4ZDpgJzZS0vvMpXATfW-C6kQ0NWhDHX.tx8OcMc7ePzqCtsRr2jHMS66oI-GUcI_" accesskey="l"><i class="entypo-logout"></i>&nbsp;&nbsp;&nbsp;Logout</a> </li>
+								</ul>
+							</li>
+							
+							<li id="header_prof_img_circle">
+								<img src="./Candidate Dashboard_files/male.png" alt="" class="img-circle pull-left" width="44" style="margin-top: 5px;">
+							</li>
+						</ul>
+						
+					</form>					
+					
+														
+		
+			</div>
+		
+		</div>
+				<hr>
+			
+<h2>Candidate Dashboard</h2>
+<div id="dash_board_template_smart">
+ 
+
+<link href="./Candidate Dashboard_files/hire_candidates.css" rel="stylesheet" type="text/css"> 
+<link href="./Candidate Dashboard_files/query_management_system.css" rel="stylesheet" type="text/css">
+<script src="./Candidate Dashboard_files/jquery.form.min.js.download"></script>
+<script src="./Candidate Dashboard_files/jquery.maskedinput.js.download"></script>
+<script src="./Candidate Dashboard_files/jquery.ui-1.9.2.js.download"></script>
+ <style>
+ .edit_candidate_info {position: absolute;float: right;margin: 0 -35px;top: 7px;font-size: 15px;}
+ </style>
+ 
+ 	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group pull-right">
+						</div>
+		</div>
+	</div>  
+	
+	<div class="panel panel-default header-emp-info" id="header-tab-detail">
+	   	<div class="panel-body">
+		     <div class="row">  
+				<div class="notifications dropdown notify pull-right"> 
+					<ul class="user-info pull-left pull-right-xs pull-none-xsm">  
+							<li class="notifications dropdown auto_drod_down_li">
+								<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="update_read_status(&#39;?NENQFAN6q12hOKu4m0h2y6LbCCWxGSPFB4Izh7EI75RbXoIiLEb6Ear-Ie7roVVkf3oV5N6qkcIGugYR4KWgfJMOmhHkZ-PwMhq4fZ9xy7ZPPl4FgLxSzPK1OmaLXgiVwvMx1kRWcCBzelSbGn7u2pBnsSZBq277mPoXZcrg2x1UrNCQ0fy3CglyPVd-IomniMA.keiEUsgHCM3FPQNepA__&#39;)" class="dropdown-toggle auto_drod_down_a" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<i class="fa fa-comments"></i>
+									</a>
+								<ul class="dropdown-menu pull-right">
+					<li>
+						<ul class="messages dropdown-menu-list scroller dropdown_chat_box append_query_list" onscroll="scrollQuery(&#39;?NENQFAN6q12hOKu4m0h2y6LbCCWxGSPFB4Izh7EI75Q.7OheTp8y0P60Uh8.WDa7wbCVgQMySaFwxFgihiOSZTlYF1cr.r4R0KDZp6wUngC4jm7uwV8g2K-gknqLK67q5Nr0uyTCO-fFJ2S7AaTkTKq0THZsdqPzBHfawR4vlyvRksWRwxIwz.xh7CTAl4zH9onWhEWN9JkEEmLbsRKgZcLzMdZEVnAgc3pUmxp.7tqQZ7EmQatu.5j6F2XK4NsdVKzQkNH8twoJcj1XfyKJp4jAPpHohFLIBwjNxT0DXqQ_&#39;,&#39;append_query_list&#39;)" tabindex="5000" style="overflow: hidden; outline: none;"><img src="./Candidate Dashboard_files/hire_candidate_loader.gif" id="loader_image" border="0" style="width: 60px; margin-top: 23px; position: relative; left: 43%; top: 40%; display: none;"><div class="no_query_found" style="text-align:center;margin-top:100px;">No Record Found</div></ul>
+						<div class="top-dropdown-search col-md-12 col-sm-12 col-xs-12" style="padding: 10px;background: #ddd;position: absolute;bottom: -50px;"> 
+							<div class=""> 					
+							<div class="col-sm-9" style="padding: 0px;">	
+								<input name="sendie_string" maxlength="100" class="form-control sendie search-query ui-autocomplete-input" value="" type="text" placeholder="Send your Query?" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>								
+							</div>
+							<div class="col-sm-3">
+								<input type="button" value="Send" style="padding-right: 25px;padding-left: 25px;text-align:center;" onclick="submit_query(&#39;?NENQFAN6q12hOKu4m0h2y05Vw3bsOb-jynotMv9owFBlS74PJV.heugsP.ZQUPUBGQy6KkAOtp5f-HrnbQKZSDHLmWb2JnvGbchYwyAdq51TfpZvTlF19D0p28wGLggtVNwvT-qIOh3F6I8UhPWJTYz8kNss-mirLvs.cAn0ajRGmCY.oekyP4VTJYnUgWF6RmboTZ1Q2vd4ZlivoZWzdfwGUArbcW.gh610yhuVSv0o4uAVeBmMbPspP63C7JXjhxjhGkUH18AOSqwD5x7HmA__&#39;)" class="send_message_input btn btn-green btn-icon sendie_string">								
+							</div>								
+							</div>
+						<div class="auto_complete_div">
+						
+						</div>
+						</div> 
+					</li> 
+				<div id="ascrail2000" class="nicescroll-rails" style="padding-right: 3px; width: 10px; z-index: 1000; cursor: default; position: absolute; top: 0px; left: -10px; height: 300px; display: none;"><div style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(212, 212, 212); border: 1px solid rgb(204, 204, 204); background-clip: padding-box; border-radius: 1px;"></div></div><div id="ascrail2000-hr" class="nicescroll-rails" style="height: 7px; z-index: 1000; top: 293px; left: 0px; position: absolute; cursor: default; display: none;"><div style="position: relative; top: 0px; height: 5px; width: 0px; background-color: rgb(212, 212, 212); border: 1px solid rgb(204, 204, 204); background-clip: padding-box; border-radius: 1px;"></div></div></ul>
+			</li> 
+					</ul> 
+				</div> 
+				<div class="member-entry" id="header-tab-detail" style="margin-top: 0px !Important;margin-bottom: 15px !Important;"> 
+					<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" class="member-img update_pic" onclick="open_upload_profile_pic()" id="profile_pic">
+													<img src="./Candidate Dashboard_files/male.png" alt="Profile Image" class="employee_img"> 
+						 
+					</a> 
+					<div class="member-details">
+						<h4>
+							<strong>Nihal Abdulla  </strong>
+						</h4> 
+						<!-- Details with Icons -->
+						<div class="row info-list"> 
+							<div class="col-sm-4">
+								<i class="entypo-user"></i>
+								Candidate Code : <strong>RFL3778N</strong>
+							</div> 
+							<div class="col-sm-4">
+								<i class="entypo-calendar"></i>
+								Date Of Birth : <strong>16/03/1993</strong>
+							</div> 
+													</div>
+					</div>  
+				</div> 
+				
+				
+    <div id="right_container_content_bar"> 
+    <ul class="breadcrumb"> 
+        <li class="dropdown">
+            <a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" class="dropdown-toggle" data-toggle="dropdown">
+               <i class="entypo-folder"></i>Mandatory Documents <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+				 
+												<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">Aadhaar card</a></li>  
+												<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">Address Proof Document</a></li>  
+												<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">Current company  salary slip</a></li>  
+												<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">Highest Qualification</a></li>  
+												<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">Offer Letter of the Last Companies</a></li>  
+												<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">PAN Card</a></li>  
+												<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">Previous Company Appointment Letter</a></li>  
+												<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">X marksheet copy</a></li>  
+												<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">XII marksheet copy</a></li>  
+					 
+				 
+            </ul>
+        </li>         
+		<li class="dropdown">
+            <a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" class="dropdown-toggle" data-toggle="dropdown">
+               <i class="entypo-folder"></i>Important Notes <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+				  
+						<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">If the Present address is different from Permanent address then need to give address proof  for both the communication address</a></li>   
+					 
+						<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">Any of the two Photo ID proof</a></li>   
+					 
+						<li><a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#">Pan Card is a must</a></li>   
+											
+					  
+            </ul>
+        </li>
+        <li class="dropdown">
+			<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VBdEqvXNRtYA8oJvBAgBKn3Wyq1RIrUTLQ9r9zykCFTzXcSL-EKFtCTKGWmGwBehdy5BT01Breo4XWI7R2SeFaQhLzmL-uZRsi7h-VQupvzymPHNFTrkxsrdq1lTu-yHQg__" class="dropdown-toggle"><i class="entypo-download"></i>Declaration Guideline</a>        </li> 
+    </ul>
+ 
+ </div>
+    <div id="breadcrumb"><ul class="breadcrumb"> 
+ 
+	<li class="dropdown">
+		<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_process_details(&#39;index.php?vVmfDc0-mXQJNH-YH.15VOqu00rMPVZkQMONBQbYHrmZK84pCRJLc6Gb.2sWaKHpMuQx8nS.i7uJzSI3BgDjMCOdlKbuOUSkNCEIqCyIARtJ-XFmoLqUF2xrmfj.P67BMT7w1f9kB4mIjrfxAuAwhjyr9DQSV94KYe6-zn3SFWIdq7S6GPbeI-HzF1EWAe.hOW6M5ldBCqI4.PfP9vy.jQ__&#39;),event.cancelBubble=true;" class="dropdown-toggle" data-toggle="dropdown">
+		   <span>Candidate Profile Update<span>		</span></span></a> 
+	</li> 
+		 
+	<li class="dropdown">
+		<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_process_details(&#39;index.php?vVmfDc0-mXQJNH-YH.15VOqu00rMPVZkQMONBQbYHrmZK84pCRJLc6Gb.2sWaKHpp7AT6NYvP6IE8Ii3ue8YaSOdlKbuOUSkNCEIqCyIARtJ-XFmoLqUF2xrmfj.P67BMT7w1f9kB4mIjrfxAuAwhjyr9DQSV94KYe6-zn3SFWIdq7S6GPbeI-HzF1EWAe.hOW6M5ldBCqI4.PfP9vy.jQ__&#39;),event.cancelBubble=true;" class="dropdown-toggle" data-toggle="dropdown">
+		   <span>Profile Acknowledgement<span>		</span></span></a> 
+	</li> 
+		 
+	<li class="dropdown">
+		<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_process_details(&#39;index.php?vVmfDc0-mXQJNH-YH.15VOqu00rMPVZkQMONBQbYHrmZK84pCRJLc6Gb.2sWaKHpW0W00fx2ot01eb6iwX7HLB6YSgaydRUKwtn9YNXP2b30PnvmTow0ZRttPq8FO0kxJv-jDLX.bblO9X0ChRo1BCHZcohFjXJhaSj-P1n1nTaeXVtWCW6dHELm7MsU3W6pMj8IrU7LzIHOeTNuKc1.aw__&#39;),event.cancelBubble=true;" class="dropdown-toggle" data-toggle="dropdown">
+		   <span class="text-success"><strong>Declaration Update</strong><span>		</span></span></a> 
+	</li> 
+		</ul> </div>  
+    
+	<nav class="navbar navbar-inverse" role="navigation"> 
+		 <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	    </div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2"> 
+			<ul class="nav navbar-nav"> 
+			 
+					<li class="dropdown menu_main_li" id="5_tab" onclick="candidate_tab_data(&#39;Offer Letter&#39;,5,&#39;index.php?vVmfDc0-mXQJNH-YH.15VJcSFylCYJGoU99ZhEwoRrSTZ.XLGOY.D1lZ.L.Xn4VOzkn7Vz2y-SJDLjDR9VfrrXi2h4HZNAiTPIWszsgGJ2FzyiiNIhwjwOFv37nARzhX8JkGDA3cvSxVI5NxlOMYvarLaRPTnHYJ8yt59q8j4g-uo7evqqRzIrC4pgOOU2.zwf6J10UHZfxOxyG6dFaFmQ__&#39;)">
+										<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_sub_tab_list(5)" id="a_tab_5" data-toggle="dropdown" class="dropdown-toggle diactive" data-original-title="">
+											 <i class="fa fa-money"></i> Offer Letter 
+										
+					</a>
+																</li>
+				 
+					<li class="dropdown menu_main_li" id="1_tab" onclick="candidate_tab_data(&#39;Personal&#39;,1,&#39;index.php?vVmfDc0-mXQJNH-YH.15VNeh0Lmd-tHgsl7w2Cd0G-1h3KSaLeN9HQgCe-Hgu8c9qirFd884jAB.FSvOSxLiqp.bUElSVeGZmTiAMbWivFXwcfKcfM5xChYh1KprNO3agDLkhJ9k3-O15XW09ejP.MlageT3shxN1i2ozd4oYikW4IsR4BMtTrsP.42zp77-&#39;)">
+										<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_sub_tab_list(1)" id="a_tab_1" data-toggle="dropdown" class="dropdown-toggle diactive" data-original-title="">
+											 <i class="fa fa-child"></i> Personal <b class="caret"></b> 
+										
+					</a>
+																	<ul class="dropdown-menu declaration_scroll" onclick="event.cancelBubble=true;" id="all_1_tab">
+						 							<li id="6">
+								<a id="child_6" data-original-title="Personal Info" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Personal Info&#39;,6,&#39;index.php?vVmfDc0-mXQJNH-YH.15VNeh0Lmd-tHgsl7w2Cd0G-1h3KSaLeN9HQgCe-Hgu8c9qirFd884jAB.FSvOSxLiqp1L8Vm8OGHyVu6FwUZFa-IoG5W99kx1N375ghRitvoVgmjkb.Ez4FAwiqGakGWaxY-H5k0J19SukUK7anZ2WnA.J-MwNevYM7Pxp9kK09A-94h7TWr6nQAnLSPBbCH2WLAHW.XO2.L2M-KW3DbHzajlpdT.NOo5d07z.20n9znP&#39;,1),event.cancelBubble=true;"><i class="fa fa-child"></i> Personal Info</a>
+							</li>
+													<li id="7">
+								<a id="child_7" data-original-title="Communication" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Communication&#39;,7,&#39;index.php?vVmfDc0-mXQJNH-YH.15VDd7bhoCM7El.tYDPU0q.EQKJXEHGh2LTriRMSaDIyXkiFPuTeaTZyZWhCYtJHcM2iHRXJtCoxeyrGZ98Q2U6.FpPojHmrDTX0TNI6WQliZbfhJFd2X06kCIEDHj.KpBhy4o6Ww.JxMF8tuNBRtrz0NF-YeZfbZtuXy0AQlEhW5o8JkGDA3cvSxVI5NxlOMYvarLaRPTnHYJ8yt59q8j4g-uo7evqqRzIrC4pgOOU2.zwf6J10UHZfxOxyG6dFaFmQ__&#39;,1),event.cancelBubble=true;"><i class="fa fa-microphone"></i> Communication</a>
+							</li>
+													<li id="8">
+								<a id="child_8" data-original-title="Languages known" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Languages known&#39;,8,&#39;index.php?vVmfDc0-mXQJNH-YH.15VN0nw.lmlaL.sGQyIfWsQu1IHxnGPLEhXKH09YF8TErCzCrVT.6F9e6P8ZanaerOrUkAdIssAvFC0t7QLTPj9DbhriEZiFR8QrjPwVNZV3mmz44ZxDdO9Rl63.yJt8OQM9q0102WiqKM8Ov2gESNRXndVMlru7fBW5FKFvMo6Rm9RmboTZ1Q2vd4ZlivoZWzdfwGUArbcW.gh610yhuVSv0o4uAVeBmMbPspP63C7JXjhxjhGkUH18AOSqwD5x7HmA__&#39;,1),event.cancelBubble=true;"><i class="fa fa-language"></i> Languages known</a>
+							</li>
+													<li id="9">
+								<a id="child_9" data-original-title="Qualification" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Qualification&#39;,9,&#39;index.php?vVmfDc0-mXQJNH-YH.15VLUcYn6b5BuVVsdiQU4Ukrp4VBgw3FQZkTXOJyLoi.jWiFPuTeaTZyZWhCYtJHcM2iHRXJtCoxeyrGZ98Q2U6.FpPojHmrDTX0TNI6WQliZbKnT2poYAgERU3zdmc6ad-omcSmh3FBrQTssqYITGb0Gg-P7NoUK6dsLHRgOxboJw8JkGDA3cvSxVI5NxlOMYvarLaRPTnHYJ8yt59q8j4g-uo7evqqRzIrC4pgOOU2.zwf6J10UHZfxOxyG6dFaFmQ__&#39;,1),event.cancelBubble=true;"><i class="fa fa-graduation-cap"></i> Qualification</a>
+							</li>
+													<li id="10">
+								<a id="child_10" data-original-title="Family" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Family&#39;,10,&#39;index.php?vVmfDc0-mXQJNH-YH.15VLjl3kMYrmT-ZRCqjdSNZP5WaYQhche1a4zi.0dkRBeg-ul91g1jA51OTnkHCpWgBVTc6dU058U5BoVfPJQq3SO259.uK7YkPUPTId1pxQmtGVct-ETXjXV1yimyyXpYy1FdQwGDBayVn9IQ2t8q210pb3mPtT0FgabsZ4i4hCzdoFo1rT50BQC.VHzz5PgAGUTO8zsTvXJoDSzi3ZRrhn8sgPk2YXj4f1-v72-NP10M&#39;,1),event.cancelBubble=true;"><i class="fa fa-globe"></i> Family</a>
+							</li>
+													<li id="11">
+								<a id="child_11" data-original-title="Identification" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Identification&#39;,11,&#39;index.php?vVmfDc0-mXQJNH-YH.15VLnTCKygYnq12p4-Gh6VrCVX62QKC4hFy0w6xobkBrqv7stwmy2zp1fyyx8BrQxWqgrGgajNCoP6Fbyjfu1..FHkdsuQqKF7FPhQmaFlCV.G1lGjwsycMCG7Rkqpk6SM1IcwI5b3KsobLkU8Hy5Y0TQb83oTVeskEIWDs8XlM.W.KW95j7U9BYGm7GeIuIQs3aBaNa0.dAUAvlR88.T4ABlEzvM7E71yaA0s4t2Ua4Z-LID5NmF4.H9f7.9vzT9dDA__&#39;,1),event.cancelBubble=true;"><i class="fa fa-user-secret"></i> Identification</a>
+							</li>
+													<li id="24">
+								<a id="child_24" data-original-title="Bank Info" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Bank Info&#39;,24,&#39;index.php?vVmfDc0-mXQJNH-YH.15VE80n3.cwImEAh75kJ94eZsXR4s4Qg6VscWaiKpjeNk-sl6.RKTmSqvIYmA5abw4DlelvdbGoMIxiZD3xMfmlQq3TB-86b9VucybMBN7YGJoVlp8b-Tg7j2lX-8uv8WCGBuyMwoHq5c55ehZCEXnAtchGv0NgNBHH9h4sEp4TiyGX.XIxWb59lJVv9AFYFT2ls4DeDprLNXjx7x4hBKy5B.mGgFI6hoXS5YVO3J8nOn3&#39;,1),event.cancelBubble=true;"><i class="fa fa-university" aria-hidden="true"></i> Bank Info</a>
+							</li>
+													<li id="12">
+								<a id="child_12" data-original-title="Skills" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Skills&#39;,12,&#39;index.php?vVmfDc0-mXQJNH-YH.15VNpCrDMJavn1i-Ym8eP7FgBdG9LZn5IlEfRo4cPc3o-lOEGTNmHCXrphdsJ1S-K273IteXkU7ngDx2sBkRA5c91gj5rYoxo-I.9QI8zbMgqoruwXio2Tt1PAuLUaDfES7-tw0UCwXlEV-6KyLndEdASU2HPLF3JnmNkkxjeX0j2106-wY24XdiobTK8uioT1k4JdAegHb5lQO6dc21pR4aN1U.kBm.Apk2NDnaSXr-fF&#39;,1),event.cancelBubble=true;"><i class="fa fa-child"></i> Skills</a>
+							</li>
+												</ul>
+											</li>
+				 
+					<li class="dropdown menu_main_li" id="2_tab" onclick="candidate_tab_data(&#39;Previous Employment&#39;,2,&#39;index.php?vVmfDc0-mXQJNH-YH.15VG4I36gn-03jPghhVH0.-iUgyhqlpC7JBIvnLXS15oMj8ol.81NGTmBdq-WW89pwIaoqxXfPOIwAfhUrzksS4qqfm1BJUlXhmZk4gDG1orxV8HHynHzOcQoWIdSqazTt2oAy5ISfZN-zteV1tPXoz-jJWoHk97IcTdYtqM3eKGIpFuCLEeATLU67D-uNs6e.-w__&#39;)">
+										<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_sub_tab_list(2)" id="a_tab_2" data-toggle="dropdown" class="dropdown-toggle diactive" data-original-title="">
+											 <i class="fa fa-gavel"></i> Previous Employment <b class="caret"></b> 
+										
+					</a>
+																	<ul class="dropdown-menu declaration_scroll" onclick="event.cancelBubble=true;" id="all_2_tab">
+						 							<li id="13">
+								<a id="child_13" data-original-title="Employment" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Employment&#39;,13,&#39;index.php?vVmfDc0-mXQJNH-YH.15VG4I36gn-03jPghhVH0.-iUgyhqlpC7JBIvnLXS15oMj8ol.81NGTmBdq-WW89pwIaoqxXfPOIwAfhUrzksS4qqdS-FZvDhh8lbuhcFGRWvy.iMJcIc6tMUnEwrAQROoRCYCqErdzXTkYFkm2HQqpvG2OvnfKTJpj8rXKYWCeaGuIRr9DYDQRx-YeLBKeE4shl-lyMVm.fZSVb-QBWBU9pbOA3g6ayzV48e8eIQSsuQfphoBSOoaF0uWFTtyfJzp9w__&#39;,2),event.cancelBubble=true;"><i class="fa fa-angellist"></i> Employment</a>
+							</li>
+													<li id="14">
+								<a id="child_14" data-original-title="Reference" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Reference&#39;,14,&#39;index.php?vVmfDc0-mXQJNH-YH.15VLuGnpkUtfOFddAQVwdUA2DmpZ-VJo9L3FtQN-FXRmpmX-Xvuv6bv6Mh7JK9QHZLPrR8rzu2xuk0uEYMHNFwkwUNjYdMsHEDdf6oQ7nRFeycC3ohbW1pjpiEWz.Mw13wQCRywNgA4BNIAtc4VB36U2i4JLCg5xS6XGNYg8UltgN4nyZAm6bUb1KHwx-eOI45n0Z9t7.Rlwb2vaoE4AcXV-GwZG3mMLxYGmNyVpxYgCdf&#39;,2),event.cancelBubble=true;"><i class="fa fa-hand-paper-o"></i> Reference</a>
+							</li>
+												</ul>
+											</li>
+				 
+					<li class="dropdown menu_main_li" id="3_tab" onclick="candidate_tab_data(&#39;Documents&#39;,3,&#39;index.php?vVmfDc0-mXQJNH-YH.15VE0FRAJY2UIFlwikjYBJ2XoKXjJReDxZSjx2TYf2IIo4zCrVT.6F9e6P8ZanaerOrUkAdIssAvFC0t7QLTPj9DaFwzG51CjcHEwEiRzdZRkWAeGQ6YCc2UtL7zKVwE31vwupENDVoQx1-rcfDnDHO3j86grbEa9oxzEuuqCPxlHC&#39;)">
+										<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_sub_tab_list(3)" id="a_tab_3" data-toggle="dropdown" class="dropdown-toggle diactive" data-original-title="">
+											 <i class="fa fa-book"></i> Documents 
+										
+					</a>
+																</li>
+				 
+					<li class="dropdown menu_main_li" id="4_tab" onclick="candidate_tab_data(&#39;Acknowledgement&#39;,4,&#39;index.php?vVmfDc0-mXQJNH-YH.15VEr9eOZ-PhYZwpHGDBQcEfXbIaUsKeXHdOgry93K1exYZ4Jxk21MuoiCF.lkxtiHnBdLtkAbLuEfwxljJGsADFLXX8D9P-Du-QZ4I5rilx3UKW95j7U9BYGm7GeIuIQs3aBaNa0.dAUAvlR88.T4ABlEzvM7E71yaA0s4t2Ua4Z-LID5NmF4.H9f7.9vzT9dDA__&#39;)">
+										<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_sub_tab_list(4)" id="a_tab_4" data-toggle="dropdown" class="dropdown-toggle diactive" data-original-title="">
+											 <i class="fa fa-thumbs-o-up"></i> Acknowledgement 
+										
+					</a>
+																</li>
+				 
+					<li class="dropdown menu_main_li active" id="15_tab" onclick="candidate_tab_data(&#39;Declaration&#39;,15,&#39;index.php?vVmfDc0-mXQJNH-YH.15VJvyXnLY3KlnWcY01tWWx8-zYqDqcZRs.SqLSC3HGEEhF0u2QBsu4R-DGWMkawAMUm3cW3t9H.t8liuqWhHgcSchGv0NgNBHH9h4sEp4TiyGX.XIxWb59lJVv9AFYFT2ls4DeDprLNXjx7x4hBKy5B.mGgFI6hoXS5YVO3J8nOn3&#39;)">
+										<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_sub_tab_list(15)" id="a_tab_15" data-toggle="dropdown" class="dropdown-toggle diactive" data-original-title="" aria-expanded="false">
+											 <i class="fa fa-file-text" aria-hidden="true"></i> Declaration <b class="caret"></b> 
+										
+					</a>
+																	<ul class="dropdown-menu declaration_scroll" onclick="event.cancelBubble=true;" id="all_15_tab" style="display:none !Important">
+						 							<li id="25">
+								<a id="child_25" data-original-title="Form 11" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Form 11&#39;,25,&#39;index.php?vVmfDc0-mXQJNH-YH.15VJvyXnLY3KlnWcY01tWWx8-zYqDqcZRs.SqLSC3HGEEhF0u2QBsu4R-DGWMkawAMUqXyh6tqj7Xz326BOYzFcGi-s.pYWga.egw-Jt7tngTdBTsaEQWCCUi3Y58HBFSYzUmHobW0yeJSG1oAXF6Z8PQm-.MMtf5tuU71fQKFGjUEIdlyiEWNcmFpKP8-WfWdNp5dW1YJbp0cQubsyxTdbqkyPwitTsvMgc55M24pzX5r&#39;,15),event.cancelBubble=true;"><i class="fa fa-file-text"></i> Form 11</a>
+							</li>
+													<li id="17">
+								<a id="child_17" data-original-title="Form 60" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Form 60&#39;,17,&#39;index.php?vVmfDc0-mXQJNH-YH.15VIQNYuU8i-b9HY.UZTxcvaDzYqDqcZRs.SqLSC3HGEEhF0u2QBsu4R-DGWMkawAMUqXyh6tqj7Xz326BOYzFcGi-s.pYWga.egw-Jt7tngTdChWbRRI8j1R9u6yZd3vbbvVfdS21ZkXpVS3RvWLkyM0m-.MMtf5tuU71fQKFGjUEIdlyiEWNcmFpKP8-WfWdNp5dW1YJbp0cQubsyxTdbqkyPwitTsvMgc55M24pzX5r&#39;,15),event.cancelBubble=true;"><i class="fa fa-file-text"></i> Form 60</a>
+							</li>
+													<li id="18">
+								<a id="child_18" data-original-title="Nomination Form" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Nomination Form&#39;,18,&#39;index.php?vVmfDc0-mXQJNH-YH.15VMlq1pHfRbJuNrA8rwuAJXivG4xK7zZez8g9eJ2I8WaspWV.ev-VzFxllbECk5ZKON-PmyII35Keb18q22TJE.oIa6m1mrkPWFC.lm03Y9QYIaVCEAt1XLQEA2AY5xQKeayDeFJeVAL6rgPJxhmRqJ8pb3mPtT0FgabsZ4i4hCzdoFo1rT50BQC.VHzz5PgAGUTO8zsTvXJoDSzi3ZRrhn8sgPk2YXj4f1-v72-NP10M&#39;,15),event.cancelBubble=true;"><i class="fa fa-file-text"></i> Nomination Form</a>
+							</li>
+													<li id="19">
+								<a id="child_19" data-original-title="Gratuity Form" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Gratuity Form&#39;,19,&#39;index.php?vVmfDc0-mXQJNH-YH.15VNsxUJ4hDYEkDl8oQ9HSI12yHn1rJyEkpTal5-UNvIWXtHyvO7bG6TS4Rgwc0XCTBcb5kzjrkDyGjIj.DQup4gKgR3jb-KolJHia9m0H3wWaTWyhh6u.cRxvoC0ZVsGeXXVfZVU7huXT8xae1KzsbYEm-.MMtf5tuU71fQKFGjUEIdlyiEWNcmFpKP8-WfWdNp5dW1YJbp0cQubsyxTdbqkyPwitTsvMgc55M24pzX5r&#39;,15),event.cancelBubble=true;"><i class="fa fa-file-text"></i> Gratuity Form</a>
+							</li>
+													<li id="20">
+								<a id="child_20" data-original-title="BGV" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;BGV&#39;,20,&#39;index.php?vVmfDc0-mXQJNH-YH.15VE0VpmxC-N1bqF22uamoKEv0HVp85SbSwKi-TyySBje4zCrVT.6F9e6P8ZanaerOrUkAdIssAvFC0t7QLTPj9Db1KDhWld.pelTYUUXtFvhXvASP1XkA2rTPCQ.sQu1kIrnC6WHWlCXVjf6HaVJkJAUhGv0NgNBHH9h4sEp4TiyGX.XIxWb59lJVv9AFYFT2ls4DeDprLNXjx7x4hBKy5B.mGgFI6hoXS5YVO3J8nOn3&#39;,15),event.cancelBubble=true;"><i class="fa fa-file-text"></i> BGV</a>
+							</li>
+													<li id="28">
+								<a id="child_28" data-original-title="Form Q" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Form Q&#39;,28,&#39;index.php?vVmfDc0-mXQJNH-YH.15VOL8jsL1L30-tEbxUrK4dkJoHzQcpSiuWTj7l1PCVjMXSCb.BZ0I.06IoZ.A2LSeD5ko64ZHaXMLXbQtt3N1-PvU90DLJKWRQ5gE7mJ0HWm54SuOoA9r6-xfgIurx.d6ytlweTG5sdDCCR.xz3oDkx1gMZnrLcNaNd-cIiVAmI26GnJ5iQhrsfhyedEmRHgM.gyk5DxDV0ANYhFAFT0KRr8_&#39;,15),event.cancelBubble=true;"><i class="fa fa-heartbeat"></i> Form Q</a>
+							</li>
+													<li id="22">
+								<a id="child_22" data-original-title="Acknowledgement" class="cursor_pointer" onclick="candidate_sub_tab_data(&#39;Acknowledgement&#39;,22,&#39;index.php?vVmfDc0-mXQJNH-YH.15VKxxKJOKybgHlWGNhHQt5VSJlUJur.9dBSzG7IxkN3ge-b.Wb-46bN4Dy0kCA21k.aWOMw5U.j0iP8icFLAm1-XFaMxP4jKFMmRxBVb1-vXt-wuBoMH4se1J3QiBTEte5b9uVHa-fw5qg5HIbQ67kzldxIv8QoW0JMoZaYbAF6F3LkFPTUGt6jhdYjtHZJ4VpCEvOYv.5lGyLuH9VC6m-PKY8c0VOuTGyt2rWVO7-IdC&#39;,15),event.cancelBubble=true;"><i class="fa fa-thumbs-up"></i> Acknowledgement</a>
+							</li>
+												</ul>
+											</li>
+				 
+					<li class="dropdown menu_main_li" id="27_tab" onclick="candidate_tab_data(&#39;HR Forms&#39;,27,&#39;index.php?vVmfDc0-mXQJNH-YH.15VK9KrMSLVgWi-GA1otyEk-lWaZaZawlw3ZS9ri7SgZdkV6AP.1O185bis0VtnrHH4Xi2h4HZNAiTPIWszsgGJ2GJ5mGf7eHkdxjSM5ftxgMJ8JkGDA3cvSxVI5NxlOMYvarLaRPTnHYJ8yt59q8j4g-uo7evqqRzIrC4pgOOU2.zwf6J10UHZfxOxyG6dFaFmQ__&#39;)">
+										<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" onclick="get_sub_tab_list(27)" id="a_tab_27" data-toggle="dropdown" class="dropdown-toggle diactive" data-original-title="">
+											 <i class="entypo-folder"></i> HR Forms 
+										
+					</a>
+																</li>
+							</ul> 
+		</div>
+     </nav>  
+	<div class="container_8" style="width:100%;"> 
+		<div class="form_layout">  
+			<div id="form_layout" class="row">  
+				<div id="tab_holder" class="col-md-12">
+					<div id="tab_contents" class="panel panel-primary" data-collapsed="0">  
+						<div id="content_add" class="panel-body"> 
+<style>
+.manage_5255{ display:none }
+.manage_5256{ display:none }
+.manage_5257{ display:none }
+.other_details{ display:none }
+.spec_cat{ display:none }
+#content_add .form-control{border:1px solid #797979 !important;}
+</style>
+<div class="row"> 
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12"><p class="text-center"><strong>EMPLOYEES' PROVIDENT FUND ORGANIZATION</strong></p></div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12"><p class="text-center"><strong>FORM NO: 11</strong></p></div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12"><p class="text-center">
+	        The employees' provident funds scheme.1952 (Paragraph-34 and 57) &amp;<br>
+	        The employees' pension scheme, 1995 (Paragraph-24)
+	</p></div>
+	<div><p class="text-center">
+			Declaration by a person taking up employment in a establishment on which EPF scheme, 1952 and / or EPS, 1995 is applicable.<br>
+			(Please go through the instruction)
+	</p></div>
+	 
+<form action="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VJvyXnLY3KlnWcY01tWWx8-zYqDqcZRs.SqLSC3HGEEhF0u2QBsu4R-DGWMkawAMUm3cW3t9H.t8liuqWhHgcSchGv0NgNBHH9h4sEp4TiyGX.XIxWb59lJVv9AFYFT2ls4DeDprLNXjx7x4hBKy5B.mGgFI6hoXS5YVO3J8nOn3" method="post" accept-charset="utf-8" name="candidate_declaration" id="candidate_declaration" onsubmit="get_confirmation(event)"><div style="display:none">
+<input type="hidden" name="cryptname" value="5bcebe96083ecaaf980bff1baacffbc8">
+</div><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12"> 
+<div class="table-responsive">
+	<table class="table table-bordered responsive">
+		<tbody><tr>
+			<td width="5%" valign="middle" align="center">1</td>
+			<td width="50%" colspan="2">Name</td>
+			<td width="45%" colspan="2"> Nihal Abdulla  </td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle;text-align:center">2</td>
+			<td colspan="2"> 
+				<div class="row">
+					<div class="col-md-4">
+						<div class="radio radio-replace color-primary neon-cb-replacement checked">
+							<label class="cb-wrapper"><input type="radio" name="radio_father_husband_name" id="father" onclick="get_selected_relationship()" value="father_masterdata_id" checked=""><div class="checked"></div></label>
+							<label>Father's Name</label>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="radio radio-replace color-primary neon-cb-replacement">
+							<label class="cb-wrapper"><input type="radio" name="radio_father_husband_name" id="husband" onclick="get_selected_relationship()" value="spouse_masterdata_id"><div class="checked"></div></label>
+							<label>Spouse Name</label>
+						</div>
+					</div>
+				</div>  
+			</td>
+			<td colspan="2">
+				<span id="father_husband_name">Abdulla B</span>
+			</td>
+		</tr> 
+		<tr>
+			<td style="vertical-align:middle;text-align:center">3</td><td colspan="2">Date of Birth (dd/mm/yyyy)</td><td colspan="2">16/03/1993</td>
+		</tr> 
+		
+		<tr>
+			<td style="vertical-align:middle;text-align:center">4</td><td colspan="2">Gender (Male/Female/Transgender)</td><td colspan="2">Male</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle;text-align:center">5</td>
+				<td colspan="2">
+					Marital Status (Married / Unmarried/Widow/Widower/Divorcee)
+				</td>
+				<td colspan="2">
+									</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle;text-align:center">6</td>
+			<td colspan="2">(a) Email ID <br><br>(b) Mobile</td>
+			<td colspan="2"><br><br>9513404626</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle;text-align:center">7</td>
+			<td colspan="2"><strong>Present Employment Details:</strong><br>Date of joining in Current establishment(dd/mm/yyyy)</td>
+			<td colspan="2">03/06/2020</td>
+		</tr>
+		<tr>
+			<td rowspan="4" style="vertical-align:middle;text-align:center">8</td>
+			<td colspan="2"><strong>KYC Details:</strong> (attached self attested copies of following KYCs)</td>
+			<td colspan="2">03/06/2020</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				a) Bank Account Number:<br><br>
+				b) IFS Code of the branch:
+			</td>
+			<td colspan="2"><br><br></td>
+		</tr>
+		<tr>
+			<td colspan="2">c) AADHAR Number</td>
+			<td colspan="2">2522 3772 6094</td>
+		</tr>
+		<tr>
+			<td colspan="2">d) Permanent Account Number(PAN), if applicable</td>
+			<td colspan="2"></td>
+		</tr>
+		
+		<tr>
+			<td style="vertical-align:middle;text-align:center">9</td>
+			<td colspan="2">Whether earlier a member of the Employees' Provident Fund Scheme,1952?<span class="mandatory_field">*</span></td>
+			<td colspan="2">
+							  
+				<div class="row">
+					<div class="col-md-4">
+						<div class="radio radio-replace color-primary neon-cb-replacement">
+							<label class="cb-wrapper"><input type="radio" name="pf_1952" id="pf_1952" value="1"><div class="checked"></div></label>
+							<label>Yes</label>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="radio radio-replace color-primary neon-cb-replacement checked">
+							<label class="cb-wrapper"><input type="radio" name="pf_1952" id="pf_1952" value="0" checked="checked"><div class="checked"></div></label>
+							<label>No</label>
+						</div>
+					</div>
+				</div> 
+							</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle;text-align:center">10</td>
+			<td colspan="2">Whether earlier a member of the Employees' Pension scheme,1995?<span class="mandatory_field">*</span></td>
+			<td colspan="2">
+								<div class="row">
+					<div class="col-md-4">
+						<div class="radio radio-replace color-primary neon-cb-replacement">
+							<label class="cb-wrapper"><input type="radio" name="pf_1995" id="pf_1995" value="1"><div class="checked"></div></label>
+							<label>Yes</label>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="radio radio-replace color-primary neon-cb-replacement checked">
+							<label class="cb-wrapper"><input type="radio" name="pf_1995" id="pf_1995" value="0" checked="checked"><div class="checked"></div></label>
+							<label>No</label>
+						</div>
+					</div>
+				</div>  
+							</td>
+		</tr>
+		<tr>
+		  <td colspan="5">If response to any or both of (9) and (10) above is 'Yes', Then mandatory fill up the Previous Employment details at (9,10 and 11)</td> 
+		</tr>
+		<tr class="manage_5255">
+			<td colspan="5">
+				<strong>A. Previous Employment Details - Un-exempted</strong>
+				<span class="radio radio-replace color-primary neon-cb-replacement" style="width: 30px;float: left;">
+					<label class="cb-wrapper"><input type="radio" name="previous_employment_detail_radio" id="previous_employment_detail_radio_E" value="A" class="previous_employment_detail_radio"><div class="checked"></div></label>
+				</span> 
+			</td>
+		</tr>
+		<tr class="manage_5256">
+			<td colspan="5">
+				<table class="table table-bordered">
+						<tbody><tr>
+							<th><span>Select</span></th>
+							<td width="20%">Establishment Name &amp; Address </td>
+							<td width="16%">Universal Account Number</td>
+							<td width="16%">PF Account Number</td>
+							<td width="12%">Date of joining (dd/mm/yyyy)</td>
+							<td width="12%">Date of exit (dd/mm/yyyy)</td>
+							<td width="12%">Scheme Certificate No.(if issued)</td>
+							<td width="12%">PPO Number (if Issued)</td>
+							<!--td width="10%">Non Contributory Period(NCP) Days</td-->
+						</tr>
+												<tr>
+							<td>
+								<div class="checkbox checkbox-replace color-primary neon-cb-replacement">
+									<label class="cb-wrapper"><input type="checkbox" name="select_nominee_E[1549]" id="select_nominee_E1549" value="1549" class="select_nominee"><div class="checked"></div></label>
+								</div> 
+					  		</td>
+							<td><textarea class="form-control" name="prev_pf_est_code_E[1549]" id="prev_pf_est_code_E"></textarea></td>
+							<td>101299898724</td>
+							<td>101299898724</td>
+							<td>18/03/2019</td>
+							<td>03/11/2019</td>
+							
+							<td><input type="text" class="form-control" name="scheme_num_E[1549]" id="scheme_num" value=""></td>
+							<td><input type="text" class="form-control" name="ppo_num_E[1549]" id="ppo_num" value=""></td>
+							<!--td><input type="text" class="form-control" name="ncp_days_E[1549]" id="ncp_days" value=""></input></td-->
+							
+						</tr>
+											</tbody></table>
+				
+			</td>
+		</tr>
+		<tr class="manage_5255">
+			<td colspan="5">
+				<strong>B. Previous Employment Details - For Exempted Trusts</strong>  
+				<span class="radio radio-replace color-primary neon-cb-replacement" style="width: 30px;float: left;">
+					<label class="cb-wrapper"><input type="radio" name="previous_employment_detail_radio" id="previous_employment_detail_radio_T" value="B" class="previous_employment_detail_radio"><div class="checked"></div></label>
+				</span> 
+			</td>
+		</tr>
+		<tr class="manage_5257">
+			<td colspan="5">
+				<table class="table table-bordered">
+						<tbody><tr>
+							<th class="form_header"><span>Select</span></th>
+							<td width="20%">Establishment Name &amp; Address </td>
+							<td width="16%">Universal Account Number</td>
+							<td width="12%">Member EPS A/C Number</td>
+							<td width="12%">Date of joining (dd/mm/yyyy)</td>
+							<td width="12%">Date of exit (dd/mm/yyyy)</td>
+							<td width="12%">Scheme Certificate No.(if issued)</td>
+							<td width="12%">PPO Number (if Issued)</td>
+							<!--td width="10%">Non Contributory Period(NCP) Days</td-->
+						</tr>
+												<tr>
+							<td>
+								<div class="checkbox checkbox-replace color-primary neon-cb-replacement">
+									<label class="cb-wrapper"><input type="checkbox" name="select_nominee_T[1549]" id="select_nominee_unexe_1549" value="1549" class="select_nominee"><div class="checked"></div></label>
+								</div> 
+					  		</td>
+							<td><textarea class="form-control" name="prev_pf_est_code_T[1549]" id="prev_pf_est_code"></textarea></td>
+							<td>101299898724</td>
+							<td><input type="text" class="form-control" name="EPS_ac_number[1549]" id="EPS_ac_number" value=""></td>
+							<td>18/03/2019</td>
+							<td>03/11/2019</td>
+							<td><input type="text" class="form-control" name="scheme_num_T[1549]" id="scheme_num" value=""></td>
+							<td><input type="text" class="form-control" name="ppo_num_T[1549]" id="ppo_num" value=""></td>
+						    <!--td><input type="text" class="form-control" name="ncp_days_T[1549]" id="ncp_days" value=""></input></td-->
+						</tr>
+											</tbody></table>
+				
+			</td>
+		</tr>
+		
+		<tr>
+			<td>12</td>
+				<td colspan="2">
+					International Worker<span class="mandatory_field">*</span>
+				</td>
+				<td colspan="2">
+				 
+				<div class="row">
+					<div class="col-md-4">
+						<div class="radio radio-replace color-primary neon-cb-replacement">
+							<label class="cb-wrapper"><input type="radio" name="international_worker" id="international_worker" value="1"><div class="checked"></div></label>
+							<label>Yes</label>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="radio radio-replace color-primary neon-cb-replacement checked">
+							<label class="cb-wrapper"><input type="radio" name="international_worker" id="international_worker_no" value="0" checked="checked"><div class="checked"></div></label>
+							<label>No</label>
+						</div>
+					</div>
+				</div> 
+								</td>
+		</tr>
+		<tr>
+			  <td></td>
+				<td colspan="2">
+					If reply to (12) above is 'Yes',Then enter the details in 12(a),12(b) and 12(c)
+				</td>
+				<td colspan="2"> </td>
+		</tr>
+		<tr class="other_details">
+			<td>12(a)</td>
+				<td colspan="2">
+					Country of origin
+				</td>
+				<td colspan="2">
+					<select name="country_id" id="country_id" class="form-control selectboxit visible" style="display: none;">
+<option value="" selected="selected">Please Select</option>
+<option value="2426">AFGHANISTAN</option>
+<option value="2427">ALAND ISLANDS</option>
+<option value="2428">ALBANIA</option>
+<option value="2429">ALGERIA</option>
+<option value="2430">AMERICAN SAMOA</option>
+<option value="2431">ANDORRA</option>
+<option value="2432">ANGOLA</option>
+<option value="2433">ANGUILLA</option>
+<option value="2434">ANTARCTICA</option>
+<option value="2435">ANTIGUA AND BARBUDA</option>
+<option value="2436">ARGENTINA</option>
+<option value="2437">ARMENIA</option>
+<option value="2438">ARUBA</option>
+<option value="2439">AUSTRALIA</option>
+<option value="2440">AUSTRIA</option>
+<option value="2441">AZERBAIJAN</option>
+<option value="2442">BAHAMAS</option>
+<option value="2443">BAHRAIN</option>
+<option value="2444">BANGLADESH</option>
+<option value="2445">BARBADOS</option>
+<option value="2446">BELARUS</option>
+<option value="2447">BELGIUM</option>
+<option value="2448">BELIZE</option>
+<option value="2449">BENIN</option>
+<option value="2450">BERMUDA</option>
+<option value="2451">BHUTAN</option>
+<option value="2452">BOLIVIA</option>
+<option value="2453">BOSNIA AND HERZEGOVINA</option>
+<option value="2454">BOTSWANA</option>
+<option value="2455">BOUVET ISLAND</option>
+<option value="2456">BRAZIL</option>
+<option value="2457">BRITISH INDIAN OCEAN TERRITORY</option>
+<option value="2458">BRUNEI DARUSSALAM</option>
+<option value="2459">BULGARIA</option>
+<option value="2460">BURKINA FASO</option>
+<option value="2461">BURUNDI</option>
+<option value="2462">CAMBODIA</option>
+<option value="2463">CAMEROON</option>
+<option value="2464">CANADA</option>
+<option value="2465">CAPE VERDE</option>
+<option value="2466">CAYMAN ISLANDS</option>
+<option value="2467">CENTRAL AFRICAN REPUBLIC</option>
+<option value="2468">CHAD</option>
+<option value="2469">CHILE</option>
+<option value="2470">CHINA</option>
+<option value="2471">CHRISTMAS ISLAND</option>
+<option value="2472">COCOS (KEELING) ISLANDS</option>
+<option value="2473">COLOMBIA</option>
+<option value="2474">COMOROS</option>
+<option value="2475">CONGO</option>
+<option value="2476">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+<option value="2477">COOK ISLANDS</option>
+<option value="2478">COSTA RICA</option>
+<option value="2479">COTE D'IVOIRE</option>
+<option value="2480">CROATIA</option>
+<option value="2481">CUBA</option>
+<option value="2482">CYPRUS</option>
+<option value="2483">CZECH REPUBLIC</option>
+<option value="2484">DENMARK</option>
+<option value="2485">DJIBOUTI</option>
+<option value="2486">DOMINICA</option>
+<option value="2487">DOMINICAN REPUBLIC</option>
+<option value="2488">ECUADOR</option>
+<option value="2489">EGYPT</option>
+<option value="2490">EL SALVADOR</option>
+<option value="2491">EQUATORIAL GUINEA</option>
+<option value="2492">ERITREA</option>
+<option value="2493">ESTONIA</option>
+<option value="2494">ETHIOPIA</option>
+<option value="2495">FALKLAND ISLANDS (MALVINAS)</option>
+<option value="2496">FAROE ISLANDS</option>
+<option value="2497">FIJI</option>
+<option value="2498">FINLAND</option>
+<option value="2499">FRANCE</option>
+<option value="2500">FRENCH GUIANA</option>
+<option value="2501">FRENCH POLYNESIA</option>
+<option value="2502">FRENCH SOUTHERN TERRITORIES</option>
+<option value="2503">GABON</option>
+<option value="2504">GAMBIA</option>
+<option value="2505">GEORGIA</option>
+<option value="2506">GERMANY</option>
+<option value="2507">GHANA</option>
+<option value="2508">GIBRALTAR</option>
+<option value="2509">GREECE</option>
+<option value="2510">GREENLAND</option>
+<option value="2511">GRENADA</option>
+<option value="2512">GUADELOUPE</option>
+<option value="2513">GUAM</option>
+<option value="2514">GUATEMALA</option>
+<option value="2515">GUINEA</option>
+<option value="2516">GUINEA-BISSAU</option>
+<option value="2517">GUYANA</option>
+<option value="2518">HAITI</option>
+<option value="2519">HEARD ISLAND AND MCDONALD ISLANDS</option>
+<option value="2520">HOLY SEE (VATICAN CITY STATE)</option>
+<option value="2521">HONDURAS</option>
+<option value="2522">HONG KONG</option>
+<option value="2523">HUNGARY</option>
+<option value="2524">ICELAND</option>
+<option value="2525">INDIA</option>
+<option value="2526">INDONESIA</option>
+<option value="2527">IRAN, ISLAMIC REPUBLIC OF</option>
+<option value="2528">IRAQ</option>
+<option value="2529">IRELAND</option>
+<option value="2530">ISRAEL</option>
+<option value="2531">ITALY</option>
+<option value="2532">JAMAICA</option>
+<option value="2533">JAPAN</option>
+<option value="2534">JORDAN</option>
+<option value="2535">KAZAKHSTAN</option>
+<option value="2536">KENYA</option>
+<option value="2537">KIRIBATI</option>
+<option value="2538">KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF</option>
+<option value="2539">KOREA, REPUBLIC OF</option>
+<option value="2540">KUWAIT</option>
+<option value="2541">KYRGYZSTAN</option>
+<option value="2542">LAO PEOPLE'S DEMOCRATIC REPUBLIC</option>
+<option value="2543">LATVIA</option>
+<option value="2544">LEBANON</option>
+<option value="2545">LESOTHO</option>
+<option value="2546">LIBERIA</option>
+<option value="2547">LIBYAN ARAB JAMAHIRIYA</option>
+<option value="2548">LIECHTENSTEIN</option>
+<option value="2549">LITHUANIA</option>
+<option value="2550">LUXEMBOURG</option>
+<option value="2551">MACAO</option>
+<option value="2552">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC</option>
+<option value="2553">MADAGASCAR</option>
+<option value="2554">MALAWI</option>
+<option value="2555">MALAYSIA</option>
+<option value="2556">MALDIVES</option>
+<option value="2557">MALI</option>
+<option value="2558">MALTA</option>
+<option value="2559">MARSHALL ISLANDS</option>
+<option value="2560">MARTINIQUE</option>
+<option value="2561">MAURITANIA</option>
+<option value="2562">MAURITIUS</option>
+<option value="2563">MAYOTTE</option>
+<option value="2564">MEXICO</option>
+<option value="2565">MICRONESIA, FEDERATED STATES OF</option>
+<option value="2566">MOLDOVA, REPUBLIC OF</option>
+<option value="2567">MONACO</option>
+<option value="2568">MONGOLIA</option>
+<option value="2569">MONTSERRAT</option>
+<option value="2570">MOROCCO</option>
+<option value="2571">MOZAMBIQUE</option>
+<option value="2572">MYANMAR</option>
+<option value="2573">NAMIBIA</option>
+<option value="2574">NAURU</option>
+<option value="2575">NEPAL</option>
+<option value="2576">NETHERLANDS</option>
+<option value="2577">NETHERLANDS ANTILLES</option>
+<option value="2578">NEW CALEDONIA</option>
+<option value="2579">NEW ZEALAND</option>
+<option value="2580">NICARAGUA</option>
+<option value="2581">NIGER</option>
+<option value="2582">NIGERIA</option>
+<option value="2583">NIUE</option>
+<option value="2584">NORFOLK ISLAND</option>
+<option value="2585">NORTHERN MARIANA ISLANDS</option>
+<option value="2586">NORWAY</option>
+<option value="2587">OMAN</option>
+<option value="2588">PAKISTAN</option>
+<option value="2589">PALAU</option>
+<option value="2590">PALESTINIAN TERRITORY, OCCUPIED</option>
+<option value="2591">PANAMA</option>
+<option value="2592">PAPUA NEW GUINEA</option>
+<option value="2593">PARAGUAY</option>
+<option value="2594">PERU</option>
+<option value="2595">PHILIPPINES</option>
+<option value="2596">PITCAIRN</option>
+<option value="2597">POLAND</option>
+<option value="2598">PORTUGAL</option>
+<option value="2599">PUERTO RICO</option>
+<option value="2600">QATAR</option>
+<option value="2601">REUNION</option>
+<option value="2602">ROMANIA</option>
+<option value="2603">RUSSIAN FEDERATION</option>
+<option value="2604">RWANDA</option>
+<option value="2605">SAINT HELENA</option>
+<option value="2606">SAINT KITTS AND NEVIS</option>
+<option value="2607">SAINT LUCIA</option>
+<option value="2608">SAINT PIERRE AND MIQUELON</option>
+<option value="2609">SAINT VINCENT AND THE GRENADINES</option>
+<option value="2610">SAMOA</option>
+<option value="2611">SAN MARINO</option>
+<option value="2612">SAO TOME AND PRINCIPE</option>
+<option value="2613">SAUDI ARABIA</option>
+<option value="2614">SENEGAL</option>
+<option value="2615">SERBIA AND MONTENEGRO</option>
+<option value="2616">SEYCHELLES</option>
+<option value="2617">SIERRA LEONE</option>
+<option value="2618">SINGAPORE</option>
+<option value="2619">SLOVAKIA</option>
+<option value="2620">SLOVENIA</option>
+<option value="2621">SOLOMON ISLANDS</option>
+<option value="2622">SOMALIA</option>
+<option value="2623">SOUTH AFRICA</option>
+<option value="2624">SOUTH GEORGIA &amp; SOUTH SANDWICH ISLANDS</option>
+<option value="2625">SPAIN</option>
+<option value="2626">SRI LANKA</option>
+<option value="2627">SUDAN</option>
+<option value="2628">SURINAME</option>
+<option value="2629">SVALBARD AND JAN MAYEN</option>
+<option value="2630">SWAZILAND</option>
+<option value="2631">SWEDEN</option>
+<option value="2632">SWITZERLAND</option>
+<option value="2633">SYRIAN ARAB REPUBLIC</option>
+<option value="2634">TAIWAN, PROVINCE OF CHINA</option>
+<option value="2635">TAJIKISTAN</option>
+<option value="2636">TANZANIA, UNITED REPUBLIC OF</option>
+<option value="2637">THAILAND</option>
+<option value="2638">TIMOR-LESTE</option>
+<option value="2639">TOGO</option>
+<option value="2640">TOKELAU</option>
+<option value="2641">TONGA</option>
+<option value="2642">TRINIDAD AND TOBAGO</option>
+<option value="2643">TUNISIA</option>
+<option value="2644">TURKEY</option>
+<option value="2645">TURKMENISTAN</option>
+<option value="2646">TURKS AND CAICOS ISLANDS</option>
+<option value="2647">TUVALU</option>
+<option value="2648">UGANDA</option>
+<option value="2649">UKRAINE</option>
+<option value="2650">UNITED ARAB EMIRATES</option>
+<option value="2651">UNITED KINGDOM</option>
+<option value="2652">UNITED STATES</option>
+<option value="2653">UNITED STATES MINOR OUTLYING ISLANDS</option>
+<option value="2654">URUGUAY</option>
+<option value="2655">UZBEKISTAN</option>
+<option value="2656">VANUATU</option>
+<option value="2657">VENEZUELA</option>
+<option value="2658">VIET NAM</option>
+<option value="2659">VIRGIN ISLANDS, BRITISH</option>
+<option value="2660">VIRGIN ISLANDS, U.S.</option>
+<option value="2661">WALLIS AND FUTUNA</option>
+<option value="2662">WESTERN SAHARA</option>
+<option value="2663">YEMEN</option>
+<option value="2664">ZAMBIA</option>
+<option value="2665">ZIMBABWE</option>
+</select><span id="country_idSelectBoxItContainer" class="selectboxit-container selectboxit-container" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" aria-owns="country_idSelectBoxItOptions"><span id="country_idSelectBoxIt" class="selectboxit form-control selectboxit visible selectboxit-enabled selectboxit-btn" name="country_id" tabindex="0" unselectable="on" style="width: 135px;"><span class="selectboxit-option-icon-container"><i id="country_idSelectBoxItDefaultIcon" class="selectboxit-default-icon selectboxit-option-icon selectboxit-container" unselectable="on"></i></span><span id="country_idSelectBoxItText" class="selectboxit-text" unselectable="on" data-val="" aria-live="polite" style="max-width: 45px;">Please Select</span><span id="country_idSelectBoxItArrowContainer" class="selectboxit-arrow-container" unselectable="on"><i id="country_idSelectBoxItArrow" class="selectboxit-arrow selectboxit-default-arrow" unselectable="on"></i></span></span><ul id="country_idSelectBoxItOptions" class="selectboxit-options selectboxit-list" tabindex="-1" role="listbox" aria-hidden="true" style="min-width: 88px;"><li data-id="0" data-val="" data-disabled="false" class="selectboxit-option  selectboxit-option-first selectboxit-selected" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>Please Select</a></li><li data-id="1" data-val="2426" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>AFGHANISTAN</a></li><li data-id="2" data-val="2427" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ALAND ISLANDS</a></li><li data-id="3" data-val="2428" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ALBANIA</a></li><li data-id="4" data-val="2429" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ALGERIA</a></li><li data-id="5" data-val="2430" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>AMERICAN SAMOA</a></li><li data-id="6" data-val="2431" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ANDORRA</a></li><li data-id="7" data-val="2432" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ANGOLA</a></li><li data-id="8" data-val="2433" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ANGUILLA</a></li><li data-id="9" data-val="2434" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ANTARCTICA</a></li><li data-id="10" data-val="2435" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ANTIGUA AND BARBUDA</a></li><li data-id="11" data-val="2436" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ARGENTINA</a></li><li data-id="12" data-val="2437" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ARMENIA</a></li><li data-id="13" data-val="2438" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ARUBA</a></li><li data-id="14" data-val="2439" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>AUSTRALIA</a></li><li data-id="15" data-val="2440" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>AUSTRIA</a></li><li data-id="16" data-val="2441" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>AZERBAIJAN</a></li><li data-id="17" data-val="2442" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BAHAMAS</a></li><li data-id="18" data-val="2443" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BAHRAIN</a></li><li data-id="19" data-val="2444" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BANGLADESH</a></li><li data-id="20" data-val="2445" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BARBADOS</a></li><li data-id="21" data-val="2446" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BELARUS</a></li><li data-id="22" data-val="2447" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BELGIUM</a></li><li data-id="23" data-val="2448" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BELIZE</a></li><li data-id="24" data-val="2449" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BENIN</a></li><li data-id="25" data-val="2450" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BERMUDA</a></li><li data-id="26" data-val="2451" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BHUTAN</a></li><li data-id="27" data-val="2452" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BOLIVIA</a></li><li data-id="28" data-val="2453" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BOSNIA AND HERZEGOVINA</a></li><li data-id="29" data-val="2454" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BOTSWANA</a></li><li data-id="30" data-val="2455" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BOUVET ISLAND</a></li><li data-id="31" data-val="2456" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BRAZIL</a></li><li data-id="32" data-val="2457" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BRITISH INDIAN OCEAN TERRITORY</a></li><li data-id="33" data-val="2458" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BRUNEI DARUSSALAM</a></li><li data-id="34" data-val="2459" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BULGARIA</a></li><li data-id="35" data-val="2460" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BURKINA FASO</a></li><li data-id="36" data-val="2461" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>BURUNDI</a></li><li data-id="37" data-val="2462" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CAMBODIA</a></li><li data-id="38" data-val="2463" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CAMEROON</a></li><li data-id="39" data-val="2464" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CANADA</a></li><li data-id="40" data-val="2465" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CAPE VERDE</a></li><li data-id="41" data-val="2466" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CAYMAN ISLANDS</a></li><li data-id="42" data-val="2467" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CENTRAL AFRICAN REPUBLIC</a></li><li data-id="43" data-val="2468" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CHAD</a></li><li data-id="44" data-val="2469" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CHILE</a></li><li data-id="45" data-val="2470" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CHINA</a></li><li data-id="46" data-val="2471" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CHRISTMAS ISLAND</a></li><li data-id="47" data-val="2472" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>COCOS (KEELING) ISLANDS</a></li><li data-id="48" data-val="2473" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>COLOMBIA</a></li><li data-id="49" data-val="2474" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>COMOROS</a></li><li data-id="50" data-val="2475" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CONGO</a></li><li data-id="51" data-val="2476" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CONGO, THE DEMOCRATIC REPUBLIC OF THE</a></li><li data-id="52" data-val="2477" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>COOK ISLANDS</a></li><li data-id="53" data-val="2478" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>COSTA RICA</a></li><li data-id="54" data-val="2479" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>COTE D'IVOIRE</a></li><li data-id="55" data-val="2480" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CROATIA</a></li><li data-id="56" data-val="2481" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CUBA</a></li><li data-id="57" data-val="2482" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CYPRUS</a></li><li data-id="58" data-val="2483" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>CZECH REPUBLIC</a></li><li data-id="59" data-val="2484" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>DENMARK</a></li><li data-id="60" data-val="2485" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>DJIBOUTI</a></li><li data-id="61" data-val="2486" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>DOMINICA</a></li><li data-id="62" data-val="2487" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>DOMINICAN REPUBLIC</a></li><li data-id="63" data-val="2488" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ECUADOR</a></li><li data-id="64" data-val="2489" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>EGYPT</a></li><li data-id="65" data-val="2490" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>EL SALVADOR</a></li><li data-id="66" data-val="2491" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>EQUATORIAL GUINEA</a></li><li data-id="67" data-val="2492" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ERITREA</a></li><li data-id="68" data-val="2493" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ESTONIA</a></li><li data-id="69" data-val="2494" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ETHIOPIA</a></li><li data-id="70" data-val="2495" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>FALKLAND ISLANDS (MALVINAS)</a></li><li data-id="71" data-val="2496" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>FAROE ISLANDS</a></li><li data-id="72" data-val="2497" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>FIJI</a></li><li data-id="73" data-val="2498" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>FINLAND</a></li><li data-id="74" data-val="2499" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>FRANCE</a></li><li data-id="75" data-val="2500" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>FRENCH GUIANA</a></li><li data-id="76" data-val="2501" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>FRENCH POLYNESIA</a></li><li data-id="77" data-val="2502" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>FRENCH SOUTHERN TERRITORIES</a></li><li data-id="78" data-val="2503" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GABON</a></li><li data-id="79" data-val="2504" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GAMBIA</a></li><li data-id="80" data-val="2505" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GEORGIA</a></li><li data-id="81" data-val="2506" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GERMANY</a></li><li data-id="82" data-val="2507" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GHANA</a></li><li data-id="83" data-val="2508" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GIBRALTAR</a></li><li data-id="84" data-val="2509" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GREECE</a></li><li data-id="85" data-val="2510" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GREENLAND</a></li><li data-id="86" data-val="2511" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GRENADA</a></li><li data-id="87" data-val="2512" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GUADELOUPE</a></li><li data-id="88" data-val="2513" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GUAM</a></li><li data-id="89" data-val="2514" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GUATEMALA</a></li><li data-id="90" data-val="2515" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GUINEA</a></li><li data-id="91" data-val="2516" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GUINEA-BISSAU</a></li><li data-id="92" data-val="2517" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>GUYANA</a></li><li data-id="93" data-val="2518" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>HAITI</a></li><li data-id="94" data-val="2519" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>HEARD ISLAND AND MCDONALD ISLANDS</a></li><li data-id="95" data-val="2520" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>HOLY SEE (VATICAN CITY STATE)</a></li><li data-id="96" data-val="2521" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>HONDURAS</a></li><li data-id="97" data-val="2522" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>HONG KONG</a></li><li data-id="98" data-val="2523" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>HUNGARY</a></li><li data-id="99" data-val="2524" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ICELAND</a></li><li data-id="100" data-val="2525" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>INDIA</a></li><li data-id="101" data-val="2526" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>INDONESIA</a></li><li data-id="102" data-val="2527" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>IRAN, ISLAMIC REPUBLIC OF</a></li><li data-id="103" data-val="2528" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>IRAQ</a></li><li data-id="104" data-val="2529" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>IRELAND</a></li><li data-id="105" data-val="2530" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ISRAEL</a></li><li data-id="106" data-val="2531" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ITALY</a></li><li data-id="107" data-val="2532" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>JAMAICA</a></li><li data-id="108" data-val="2533" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>JAPAN</a></li><li data-id="109" data-val="2534" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>JORDAN</a></li><li data-id="110" data-val="2535" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>KAZAKHSTAN</a></li><li data-id="111" data-val="2536" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>KENYA</a></li><li data-id="112" data-val="2537" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>KIRIBATI</a></li><li data-id="113" data-val="2538" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF</a></li><li data-id="114" data-val="2539" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>KOREA, REPUBLIC OF</a></li><li data-id="115" data-val="2540" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>KUWAIT</a></li><li data-id="116" data-val="2541" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>KYRGYZSTAN</a></li><li data-id="117" data-val="2542" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>LAO PEOPLE'S DEMOCRATIC REPUBLIC</a></li><li data-id="118" data-val="2543" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>LATVIA</a></li><li data-id="119" data-val="2544" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>LEBANON</a></li><li data-id="120" data-val="2545" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>LESOTHO</a></li><li data-id="121" data-val="2546" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>LIBERIA</a></li><li data-id="122" data-val="2547" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>LIBYAN ARAB JAMAHIRIYA</a></li><li data-id="123" data-val="2548" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>LIECHTENSTEIN</a></li><li data-id="124" data-val="2549" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>LITHUANIA</a></li><li data-id="125" data-val="2550" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>LUXEMBOURG</a></li><li data-id="126" data-val="2551" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MACAO</a></li><li data-id="127" data-val="2552" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MACEDONIA, THE FORMER YUGOSLAV REPUBLIC</a></li><li data-id="128" data-val="2553" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MADAGASCAR</a></li><li data-id="129" data-val="2554" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MALAWI</a></li><li data-id="130" data-val="2555" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MALAYSIA</a></li><li data-id="131" data-val="2556" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MALDIVES</a></li><li data-id="132" data-val="2557" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MALI</a></li><li data-id="133" data-val="2558" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MALTA</a></li><li data-id="134" data-val="2559" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MARSHALL ISLANDS</a></li><li data-id="135" data-val="2560" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MARTINIQUE</a></li><li data-id="136" data-val="2561" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MAURITANIA</a></li><li data-id="137" data-val="2562" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MAURITIUS</a></li><li data-id="138" data-val="2563" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MAYOTTE</a></li><li data-id="139" data-val="2564" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MEXICO</a></li><li data-id="140" data-val="2565" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MICRONESIA, FEDERATED STATES OF</a></li><li data-id="141" data-val="2566" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MOLDOVA, REPUBLIC OF</a></li><li data-id="142" data-val="2567" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MONACO</a></li><li data-id="143" data-val="2568" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MONGOLIA</a></li><li data-id="144" data-val="2569" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MONTSERRAT</a></li><li data-id="145" data-val="2570" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MOROCCO</a></li><li data-id="146" data-val="2571" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MOZAMBIQUE</a></li><li data-id="147" data-val="2572" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>MYANMAR</a></li><li data-id="148" data-val="2573" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NAMIBIA</a></li><li data-id="149" data-val="2574" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NAURU</a></li><li data-id="150" data-val="2575" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NEPAL</a></li><li data-id="151" data-val="2576" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NETHERLANDS</a></li><li data-id="152" data-val="2577" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NETHERLANDS ANTILLES</a></li><li data-id="153" data-val="2578" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NEW CALEDONIA</a></li><li data-id="154" data-val="2579" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NEW ZEALAND</a></li><li data-id="155" data-val="2580" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NICARAGUA</a></li><li data-id="156" data-val="2581" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NIGER</a></li><li data-id="157" data-val="2582" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NIGERIA</a></li><li data-id="158" data-val="2583" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NIUE</a></li><li data-id="159" data-val="2584" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NORFOLK ISLAND</a></li><li data-id="160" data-val="2585" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NORTHERN MARIANA ISLANDS</a></li><li data-id="161" data-val="2586" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>NORWAY</a></li><li data-id="162" data-val="2587" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>OMAN</a></li><li data-id="163" data-val="2588" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PAKISTAN</a></li><li data-id="164" data-val="2589" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PALAU</a></li><li data-id="165" data-val="2590" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PALESTINIAN TERRITORY, OCCUPIED</a></li><li data-id="166" data-val="2591" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PANAMA</a></li><li data-id="167" data-val="2592" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PAPUA NEW GUINEA</a></li><li data-id="168" data-val="2593" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PARAGUAY</a></li><li data-id="169" data-val="2594" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PERU</a></li><li data-id="170" data-val="2595" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PHILIPPINES</a></li><li data-id="171" data-val="2596" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PITCAIRN</a></li><li data-id="172" data-val="2597" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>POLAND</a></li><li data-id="173" data-val="2598" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PORTUGAL</a></li><li data-id="174" data-val="2599" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>PUERTO RICO</a></li><li data-id="175" data-val="2600" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>QATAR</a></li><li data-id="176" data-val="2601" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>REUNION</a></li><li data-id="177" data-val="2602" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ROMANIA</a></li><li data-id="178" data-val="2603" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>RUSSIAN FEDERATION</a></li><li data-id="179" data-val="2604" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>RWANDA</a></li><li data-id="180" data-val="2605" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SAINT HELENA</a></li><li data-id="181" data-val="2606" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SAINT KITTS AND NEVIS</a></li><li data-id="182" data-val="2607" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SAINT LUCIA</a></li><li data-id="183" data-val="2608" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SAINT PIERRE AND MIQUELON</a></li><li data-id="184" data-val="2609" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SAINT VINCENT AND THE GRENADINES</a></li><li data-id="185" data-val="2610" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SAMOA</a></li><li data-id="186" data-val="2611" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SAN MARINO</a></li><li data-id="187" data-val="2612" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SAO TOME AND PRINCIPE</a></li><li data-id="188" data-val="2613" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SAUDI ARABIA</a></li><li data-id="189" data-val="2614" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SENEGAL</a></li><li data-id="190" data-val="2615" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SERBIA AND MONTENEGRO</a></li><li data-id="191" data-val="2616" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SEYCHELLES</a></li><li data-id="192" data-val="2617" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SIERRA LEONE</a></li><li data-id="193" data-val="2618" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SINGAPORE</a></li><li data-id="194" data-val="2619" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SLOVAKIA</a></li><li data-id="195" data-val="2620" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SLOVENIA</a></li><li data-id="196" data-val="2621" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SOLOMON ISLANDS</a></li><li data-id="197" data-val="2622" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SOMALIA</a></li><li data-id="198" data-val="2623" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SOUTH AFRICA</a></li><li data-id="199" data-val="2624" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SOUTH GEORGIA &amp; SOUTH SANDWICH ISLANDS</a></li><li data-id="200" data-val="2625" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SPAIN</a></li><li data-id="201" data-val="2626" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SRI LANKA</a></li><li data-id="202" data-val="2627" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SUDAN</a></li><li data-id="203" data-val="2628" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SURINAME</a></li><li data-id="204" data-val="2629" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SVALBARD AND JAN MAYEN</a></li><li data-id="205" data-val="2630" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SWAZILAND</a></li><li data-id="206" data-val="2631" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SWEDEN</a></li><li data-id="207" data-val="2632" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SWITZERLAND</a></li><li data-id="208" data-val="2633" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>SYRIAN ARAB REPUBLIC</a></li><li data-id="209" data-val="2634" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TAIWAN, PROVINCE OF CHINA</a></li><li data-id="210" data-val="2635" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TAJIKISTAN</a></li><li data-id="211" data-val="2636" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TANZANIA, UNITED REPUBLIC OF</a></li><li data-id="212" data-val="2637" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>THAILAND</a></li><li data-id="213" data-val="2638" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TIMOR-LESTE</a></li><li data-id="214" data-val="2639" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TOGO</a></li><li data-id="215" data-val="2640" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TOKELAU</a></li><li data-id="216" data-val="2641" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TONGA</a></li><li data-id="217" data-val="2642" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TRINIDAD AND TOBAGO</a></li><li data-id="218" data-val="2643" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TUNISIA</a></li><li data-id="219" data-val="2644" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TURKEY</a></li><li data-id="220" data-val="2645" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TURKMENISTAN</a></li><li data-id="221" data-val="2646" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TURKS AND CAICOS ISLANDS</a></li><li data-id="222" data-val="2647" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>TUVALU</a></li><li data-id="223" data-val="2648" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>UGANDA</a></li><li data-id="224" data-val="2649" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>UKRAINE</a></li><li data-id="225" data-val="2650" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>UNITED ARAB EMIRATES</a></li><li data-id="226" data-val="2651" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>UNITED KINGDOM</a></li><li data-id="227" data-val="2652" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>UNITED STATES</a></li><li data-id="228" data-val="2653" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>UNITED STATES MINOR OUTLYING ISLANDS</a></li><li data-id="229" data-val="2654" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>URUGUAY</a></li><li data-id="230" data-val="2655" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>UZBEKISTAN</a></li><li data-id="231" data-val="2656" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>VANUATU</a></li><li data-id="232" data-val="2657" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>VENEZUELA</a></li><li data-id="233" data-val="2658" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>VIET NAM</a></li><li data-id="234" data-val="2659" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>VIRGIN ISLANDS, BRITISH</a></li><li data-id="235" data-val="2660" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>VIRGIN ISLANDS, U.S.</a></li><li data-id="236" data-val="2661" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>WALLIS AND FUTUNA</a></li><li data-id="237" data-val="2662" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>WESTERN SAHARA</a></li><li data-id="238" data-val="2663" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>YEMEN</a></li><li data-id="239" data-val="2664" data-disabled="false" class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ZAMBIA</a></li><li data-id="240" data-val="2665" data-disabled="false" class="selectboxit-option  selectboxit-option-last" role="option"><a class="selectboxit-option-anchor"><span class="selectboxit-option-icon-container"><i class="selectboxit-option-icon  selectboxit-container"></i></span>ZIMBABWE</a></li></ul></span>				</td>
+		</tr>
+		<tr class="other_details">
+			<td>12(b)</td>
+				<td colspan="2">
+					Passport Number
+				</td>
+				<td colspan="2">
+								</td>
+		</tr>
+		<tr class="other_details">
+			<td>12(c)</td>
+				<td colspan="2">
+					Passport Valid
+				</td>
+				<td colspan="2">
+				From  :	<br><br>
+				To  :	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				</td>
+		</tr>
+		<tr>
+			<td colspan="5"><strong>C . Undertaking</strong></td> 
+		</tr>
+		<tr>
+			<td colspan="5"> 
+			<ol style="padding:8px;line-height: 25px;">
+				<li>Certified that the particulars are true to the best of my knowlegde.</li>
+				<li>I authorized EPFO to use my Aadhar for verification/authentication/e-KYC purpose for service delivery.</li>
+				<li>Kindly transfer the funds and service details, if applicable, from the previous PF account as declared above to the present P.F. Account as I am an Aadhar verified employee in my previous PF Account.*</li>
+				<li>In case of changes in above details, the same will be intimated to the employer ar the earliest.</li>
+			</ol> 
+			</td>
+		</tr>
+    <tr>
+			<td colspan="3" style="height:40px">Date : </td>
+			<td colspan="2">Signature_______________</td>
+		</tr>
+		<tr>
+			<td colspan="3">Place : </td>
+			<td colspan="2"></td>
+		</tr>
+
+		<tr>
+			<td colspan="5"><strong>Declaration by Present Employer</strong></td> 
+		</tr>
+		<tr>
+			<td colspan="5"> 
+			<ul style="padding:8px;line-height: 25px;">
+				<li>A . The member <strong> Nihal Abdulla  </strong> has joined on 03/06/2020 and has been alloted PF member ID ___________</li>
+				<li>B . In case person was earlier not a member of EPF scheme, 1952 and EPS, 1995:
+					<ul style="padding:8px;">
+						<li>(1) . (Post allotment of UAN) The UAN allotted for the member is___________</li>
+						<li>Please tick the appropriate option:</li>
+						<li>The KYC detail of the above member in the UAN database
+							<ul>
+								<li>  
+									<div class="radio radio-replace color-primary neon-cb-replacement checked">
+										<label class="cb-wrapper"><input type="radio" name="kyc_detail_1" id="kyc_detail_1" value="0" checked="checked"><div class="checked"></div></label>
+										<label>Have not been uploaded</label>
+									</div> 
+								</li>
+								<li>
+									<div class="radio radio-replace color-primary neon-cb-replacement">
+										<label class="cb-wrapper"><input type="radio" name="kyc_detail_1" id="kyc_detail_1" value="1"><div class="checked"></div></label>
+										<label>Have been uploaded but not approved</label>
+									</div> 
+								</li>
+								<li>
+									<div class="radio radio-replace color-primary neon-cb-replacement">
+										<label class="cb-wrapper"><input type="radio" name="kyc_detail_1" id="kyc_detail_1" value="2"><div class="checked"></div></label>
+										<label>Have been uploaded but approved with DSC</label>
+									</div> 
+								</li>
+							</ul>
+						</li> 
+					</ul>
+				</li>
+				
+				<li>C . In case person was earlier a member of EPF scheme, 1952 and EPS, 1995:
+					<ul style="padding:8px;">
+						<li>The above member ID of the member as mentioned in (A) above has been tagged with His/Her UAN/Previous Member ID as declared by member</li>
+						<li>Please tick the appropriate option: 
+							<ul>
+								<li>
+									<div class="radio radio-replace color-primary neon-cb-replacement checked">
+										<label class="cb-wrapper"><input type="radio" name="kyc_detail_2" id="kyc_detail_2" value="0" checked="checked"><div class="checked"></div></label>
+										<label>The KYC detail of the above member in the UAN database have been approved with digital signature certificate and transfer request has been generated on portal</label>
+									</div> 
+								</li>
+								<li>
+									<div class="radio radio-replace color-primary neon-cb-replacement">
+										<label class="cb-wrapper"><input type="radio" name="kyc_detail_2" id="kyc_detail_2" value="1"><div class="checked"></div></label>
+										<label>As the DSC of the establishment are not registered with EPFO, The member has been informed to file physical claim (Form 13) for transfer of funds from his previous establishment.</label>
+									</div> 
+								</li> 
+							</ul>
+						</li> 
+					</ul>
+				</li>
+			</ul> 
+			</td>
+		</tr>
+    	<tr>
+			<td colspan="3" style="height:70px; vertical-align:bottom">Date : </td>
+			<td colspan="2" style="height:70px; text-align:center; vertical-align:bottom">Signature of Employer with Seal of <br>Establishment</td>
+		</tr>
+		
+		<tr>
+			<td colspan="5" style="height:40px">*Auto transfer of previous PF account would be possible in respect of Aadhar verified employees only. Other employees are requested to file physical claim(Form-13) for transfer of account from the previous establishment.</td>
+			
+		</tr>
+		<tr> 
+			<td colspan="5">
+				<button name="declaration_update" id="declaration_update" value="declaration_update" type="submit" class="btn btn-blue btn-icon">Submit<i class="entypo-check"></i></button>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+</div>	  
+</form>	 
+</div>
+ 
+
+<script>
+ 
+function get_selected_relationship(){
+	var flag = $('input[type=radio][name=radio_father_husband_name]:checked').attr('id');
+	if(flag=='father'){
+		var url="index.php?vVmfDc0-mXQJNH-YH.15VEQp9oHzLUTi3f6qJqy4mdkzgqyuH7QKi1t.R8dujxSM6RjZls2HkN8vuqeUG4Zg2cwq1U-uhfXuj-GWp2nqzq10fhmqCEPmXTQxmJ.l26uRMT7w1f9kB4mIjrfxAuAwhjyr9DQSV94KYe6-zn3SFWIdq7S6GPbeI-HzF1EWAe.hOW6M5ldBCqI4.PfP9vy.jQ__";
+	}else{
+		var url="index.php?vVmfDc0-mXQJNH-YH.15VEQp9oHzLUTi3f6qJqy4mdkzgqyuH7QKi1t.R8dujxSMOR9spE1le0-NDboWH11ZIbLE.oBMOJdmMY.z9.Klt3YCYwxD.Z3Pmt3Lj7diM3hLJv-jDLX.bblO9X0ChRo1BCHZcohFjXJhaSj-P1n1nTaeXVtWCW6dHELm7MsU3W6pMj8IrU7LzIHOeTNuKc1.aw__";
+	} 
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: url,
+		data: {cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		async: true,
+		success: function(res)
+		{
+			$('#father_husband_name').html($.trim(res));
+		}
+	});  
+}
+function get_confirmation(e){
+	$('#modal_confirm_box').modal('show');
+	$('#modal_confirm_box').find('.modal-title').html('Confirmation'); 
+	$('#modal_confirm_box').find('.modal-body').html('Do you really want to submit the form...?'); 
+	$('#modal_confirm_box').find('#cnfbox_modal_ok').show('fast');
+	$('#modal_confirm_box').find('#cnfbox_modal_ok').attr('onclick','enable_confirm()');
+	e.preventDefault();  
+}
+function enable_confirm(){  
+	$('#candidate_declaration').submit();  
+}
+$(document).ready(function(){
+	$('#declaration_update').on('click',function(e){  
+		$('#candidate_declaration').ajaxForm({ 
+			 data: {
+				declaration_update: 'declaration_update'
+			 },
+			 beforeSubmit : function(formData){},
+			 success : function(data){  
+				$('#modal_confirm_box').modal('hide');
+			    if($.trim(data)==1){ 
+				    $('#name-error').hide();
+					$('html,body').animate({scrollTop: 0}, 'slow');
+					var opts = {"closeButton": true,"debug": false,"positionClass": "toast-top-right","onclick": null,"showDuration": "300","hideDuration": "1000","timeOut": "5000","extendedTimeOut": "1000","showEasing": "swing","hideEasing": "linear","showMethod": "fadeIn","hideMethod": "fadeOut"}; 
+					toastr.success("Form submitted successfully...!", "", opts); 
+					
+						            	candidate_sub_tab_data('','','index.php?vVmfDc0-mXQJNH-YH.15VJvyXnLY3KlnWcY01tWWx8-zYqDqcZRs.SqLSC3HGEEhF0u2QBsu4R-DGWMkawAMUqXyh6tqj7Xz326BOYzFcGh.wOPggS7Qo14yMPMO7SyH.vyZ6f1cis5Qd4G2aUnNSiEa-Q2A0Ecf2HiwSnhOLIZf5cjFZvn2UlW-0AVgVPaWzgN4Omss1ePHvHiEErLkH6YaAUjqGhdLlhU7cnyc6fc_'); 
+			    }else{
+					setTimeout(function(){ $(".error").html(''); }, 5000);
+					$('#content_add').html(data);
+			    }
+			 }
+		}); 
+	}); 
+	
+	$('#pf_1995,#pf_1952').on('click',function(){
+		if($('#pf_1952').is(':checked')==true || $('#pf_1995').is(':checked')==true){ 
+			$('.manage_5255').fadeIn();
+			if($('#previous_employment_detail_radio_T').is(':checked')==true){ 
+				$('.manage_5257').fadeIn();
+			}
+			if($('#previous_employment_detail_radio_E').is(':checked')==true){ 
+				$('.manage_5256').fadeIn();
+			}
+		}else{ 
+			//$('#uan_num,#prev_pf_reg_code,#prev_pf_ofc_code,#prev_pf_est_code,#prev_pf_etn_code,#prev_pf_acnt_num,#prev_exit_date,#scheme_num,#ppo_num').val('');
+			$('.manage_5255').fadeOut();
+			$('.manage_5256').fadeOut();
+			$('.manage_5257').fadeOut();
+		}
+	})
+	if($('#pf_1952').is(':checked')==true || $('#pf_1995').is(':checked')==true){ 
+		$('.manage_5255').fadeIn();
+		if($('#previous_employment_detail_radio_T').is(':checked')==true){ 
+			$('.manage_5257').fadeIn();
+		}
+		if($('#previous_employment_detail_radio_E').is(':checked')==true){ 
+			$('.manage_5256').fadeIn();
+		}
+	}else{ 
+		//$('#uan_num,#prev_pf_reg_code,#prev_pf_ofc_code,#prev_pf_est_code,#prev_pf_etn_code,#prev_pf_acnt_num,#prev_exit_date,#scheme_num,#ppo_num').val('');
+		$('.manage_5255').fadeOut();
+	} 
+	$('#international_worker').on('click',function(){ 
+		if($('#international_worker').is(':checked')==true){ 
+			$('.other_details').fadeIn();
+		}else{ 
+			$('#country_id,#passport_num,#passport_valid_from,#passport_valid_to').val('');
+			$('.other_details').fadeOut();
+		}
+	})
+	$('#international_workers').on('click',function(){ 
+		if($('#international_workers').is(':checked')==true){ 
+			$('#country_id,#passport_num,#passport_valid_from,#passport_valid_to').val('');
+			$('.other_details').fadeOut(); 
+		}else{ 
+			$('.other_details').fadeIn();
+		}
+	}) 
+	if($('#international_worker').is(':checked')==true){ 
+		$('.other_details').fadeIn();
+	}else{ 
+		$('#country_id,#passport_num,#passport_valid_from,#passport_valid_to').val('');
+		$('.other_details').fadeOut();
+	} 
+	
+	$('#international_worker_no').on('click',function(){ 
+		if($('#international_worker_no').is(':checked')==true){ 
+			$('#country_id,#passport_num,#passport_valid_from,#passport_valid_to').val('');
+			$('.other_details').fadeOut();
+		}
+	})
+	$('#specially_abled0').on('click',function(){ 
+		if($('#specially_abled0').is(':checked')==true){ 
+			$('.spec_cat').fadeIn();
+		}else{ 
+			$('#specially_abled').val('');
+			$('.spec_cat').fadeOut();
+		}
+	})
+	$('#specially_abled1').on('click',function(){ 
+		if($('#specially_abled1').is(':checked')==true){ 
+			$('#specially_abled').val('');
+			$('.spec_cat').fadeOut(); 
+		}else{ 
+			$('.spec_cat').fadeIn();
+		}
+	})  
+	if($('#specially_abled0').is(':checked')==true){ 
+		$('.spec_cat').fadeIn();
+	}else{ 
+		$('#specially_abled').val('');
+		$('.spec_cat').fadeOut();
+	} 
+
+	
+	get_selected_relationship();
+	$('#close_msg').on('click',function(){
+		$('#success_msg').fadeOut('slow');
+	}); 
+	$("#passport_valid_from , #passport_valid_to , #prev_exit_date").keydown(function (e){e.preventDefault();});
+});	
+
+$(function () {
+  $('#prev_exit_date').datepicker({ 
+	  clearBtn: true,
+	  autoclose:true,
+	  endDate : new Date(),
+	  format: 'dd/mm/yyyy'
+  }); 
+  
+  $('#passport_valid_from').datepicker({  
+	  clearBtn: true, 
+      endDate : new Date(),
+      format: 'dd/mm/yyyy' 
+  }).on('changeDate', function(selected){
+      startDate = new Date(selected.date.valueOf());
+      startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+      $('#passport_valid_to').datepicker('setStartDate', startDate);
+  }); 
+	 
+  $('#passport_valid_to').datepicker({  
+	  clearBtn: true, 
+	  startDate: new Date(), 
+	  format: 'dd/mm/yyyy' 
+  }).on('changeDate', function(selected){
+      FromEndDate = new Date(selected.date.valueOf());
+      FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+      $('#passport_valid_from').datepicker('setEndDate', FromEndDate); 
+  }); 
+});
+
+// Table point 9 & 10 hide show
+$('#previous_employment_detail_radio_T,#previous_employment_detail_radio_E').on('click',function(){
+	if($('#previous_employment_detail_radio_T').is(':checked')==true || $('#previous_employment_detail_radio_T').is(':checked')==true){ 
+		$('.manage_5256').fadeOut();
+		$('.manage_5257').fadeIn();
+		$('.manage_5256').find('input[type="text"]').val('');
+		$('.manage_5257').find('input[type="text"]').val('');
+		$('.manage_5256').find('textarea').val('');
+		$('.manage_5257').find('textarea').val('');
+		$('.manage_5256').find('input[type="checkbox"]').removeAttr('checked');
+		$('.manage_5257').find('input[type="checkbox"]').removeAttr('checked');
+		$('.manage_5256').find('tr td .checkbox').removeClass('checked');
+		$('.manage_5257').find('tr td .checkbox').removeClass('checked');
+	}else{ 
+		//$('#uan_num,#prev_pf_reg_code,#prev_pf_ofc_code,#prev_pf_est_code,#prev_pf_etn_code,#prev_pf_acnt_num,#prev_exit_date,#scheme_num,#ppo_num').val('');
+		$('.manage_5257').fadeOut();
+		$('.manage_5256').fadeIn();
+		$('.manage_5256').find('input[type="text"]').val('');
+		$('.manage_5257').find('input[type="text"]').val('');
+		$('.manage_5256').find('textarea').val('');
+		$('.manage_5257').find('textarea').val('');
+		$('.manage_5256').find('input[type="checkbox"]').removeAttr('checked');
+		$('.manage_5257').find('input[type="checkbox"]').removeAttr('checked');
+		$('.manage_5256').find('tr td .checkbox').removeClass('checked');
+		$('.manage_5257').find('tr td .checkbox').removeClass('checked');
+		
+	}
+})
+$(function () {
+	if($('#previous_employment_detail_radio_T').is(':checked')==true){ 
+		$('.manage_5257').fadeIn();
+	}else{ 
+		$('.manage_5257').fadeOut();
+	} 
+	if($('#previous_employment_detail_radio_E').is(':checked')==true){ 
+		$('.manage_5256').fadeIn();
+	}else{ 
+		$('.manage_5256').fadeOut();
+	} 
+});
+</script>
+ </div> 
+					</div> 
+				</div> 
+			</div> 
+		</div> 
+	</div> 
+		
+			</div>
+		</div>
+	</div> 
+<!-- Modal -->
+<div id="errors_popups_sts" class="modal fade bs-example-modal-sm" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title" id="error_header_sts"></h4>
+      </div>
+      <div id="remarks_error" style="display:none" class="alert alert-danger"></div>
+      <div class="modal-body" id="error_content_sts"> </div>
+		<div class=" modal-body form-group" id="remarkDiv">
+		  <label for="comment">Remarks </label>
+		  <textarea class="form-control" name="status_remarks" id="status_remarks"></textarea>
+		</div>
+      <div class="modal-footer" id="error_button_sts">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" role="dialog" tabindex="-1" id="confirm-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="confirm-header">
+                ...
+            </div>
+            <div class="modal-body" id="confirm-body">
+                ...
+            </div>
+            <div class="modal-footer" id="confirm-footer">
+ 
+            </div>
+        </div>
+    </div>
+</div>
+	
+
+
+
+
+
+<div class="modal fade " id="upload_errors_popups">
+	<div class="modal-dialog">
+		<div class="modal-content"> 
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Set Profile Picture</h4>
+			</div> 
+			<form action="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VMEmTHWZZN9jpIMYnAPT3HHrQPD9oQGwpER3fnc0-7mde7St1kUeFQiaVpw8qxpyOJbBsvDx24K6uJaap3MUvSeU2HPLF3JnmNkkxjeX0j2106-wY24XdiobTK8uioT1k4JdAegHb5lQO6dc21pR4aN1U.kBm.Apk2NDnaSXr-fF" method="post" accept-charset="utf-8" name="candidate_update_pic" id="candidate_update_pic"><div style="display:none">
+<input type="hidden" name="cryptname" value="5bcebe96083ecaaf980bff1baacffbc8">
+</div>			<div class="modal-body"> 
+				<div class="row">
+					<div class="col-md-12"> 
+						<div class="form-group no-margin">
+							<label for="field-7" class="control-label">Update Profile Picture</label>
+							
+							<div class="fileinput fileinput-new" data-provides="fileinput"><input type="hidden">
+								<div class="input-group">
+									<div class="form-control uneditable-input" data-trigger="fileinput">
+										<i class="glyphicon glyphicon-file fileinput-exists"></i>
+										<span class="fileinput-filename"></span>
+									</div>
+									<span class="input-group-addon btn btn-default btn-file">
+										<span class="fileinput-new">Select file</span>
+										<span class="fileinput-exists">Change</span>
+										<input type="file" name="profile_picture" value="" id="profile_picture">									</span>
+									<a href="https://simplilearn.stohrm.com/index.php?vVmfDc0-mXQJNH-YH.15VC9ITliKYogM5IkZOppECv1XoA-7U7XzluKzRW2escfhlsGy8PHbgrq4lpqncxS9J5TYc8sXcmeY2STGN5fSPbXTr-Bjbhd2KhtMry6KhPWTgl0B6AdvmVA7p1zbWlHho3VT6QGb4CmTY0OdpJev98U_#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+								</div>
+							</div>  
+							<span id="helpBlock2" class="help-block" style="color: #005993 !Important;"><strong>Upload Images - jpg | jpeg | png | gif [max-size 1MB]</strong></span>
+						</div>	 
+					</div>
+				</div> 
+			</div> 
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="submit" name="upload_profile" id="upload_profile" class="btn btn-blue btn-icon">Update Profile Picture<i class="entypo-picture"></i></button>
+			</div>
+			</form>		</div>
+	</div>
+</div> 
+<div class="modal fade" id="common-confirm-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header common-modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title common-modal-title"></h4>
+			</div>
+			<div class="modal-body common-modal-body"> </div>
+			<div class="modal-footer common-modal-footer">
+				<button type="button" id="common-cnfbox_modal_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="button" id="common-cnfbox_modal_ok" class="btn btn-info">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="./Candidate Dashboard_files/query_management_system.js.download" type="text/javascript"></script>
+<script type="text/javascript"> 
+$("document").ready(function(){
+	$('#msgbox_modal_ok').on('click',function(){
+		$('#modal_msg_box').modal('hide');
+	}) 
+	$('.datepicker').datepicker({
+	     clearBtn: true,
+		 format: 'dd/mm/yyyy'
+	});
+});
+function get_sub_tab_list(tab_id){
+   // $('.dropdown-menu').fadeOut();
+	//$('#all_tab_'+tab_id).fadeIn();
+}
+ 
+$("document").ready(function(){ 
+	get_breadcrumbs();  
+	right_container_contents('chart');
+	$( ".menu_main_li,.dropdown-menu" ).hover(
+	  function() {
+		$('#all_'+this.id).attr('style','display:block !Important').fadeIn();
+	  }, function() {
+		  $('#all_'+this.id).attr('style','display:none !Important').fadeOut();
+	  }
+	);
+	 
+   $('#upload_profile').on('click',function(){
+		$('#candidate_update_pic').ajaxForm({ 
+	         beforeSubmit : function(formData){
+	         },
+	         success : function(data){ 
+				 if($.trim(data)==1){
+					 reset_action_popup();
+					 get_profile_picture();
+				 }else{
+					 var opts = {"closeButton": true,"debug": false,"positionClass": "toast-top-right","onclick": null,"showDuration": "300","hideDuration": "1000","timeOut": "5000","extendedTimeOut": "1000","showEasing": "swing","hideEasing": "linear","showMethod": "fadeIn","hideMethod": "fadeOut"}; 
+					 toastr.error(data, "", opts); 
+				 } 
+	         }
+		}); 
+	});
+});
+function get_breadcrumbs(){
+	var url="index.php?vVmfDc0-mXQJNH-YH.15VFMDkxtOIx6H8DI2HmmDIIrSopqTd0DLqg1.yak.c8c24z4S0ctumlatZlCc-fg3GUZm6E2dUNr3eGZYr6GVs3X8BlAK23FvoIetdMoblUr9KOLgFXgZjGz7KT.twuyV44cY4RpFB9fADkqsA.cex5g_";	
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: url,
+		data: {cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		async: true,
+		success: function(res)
+		{   
+			$('#breadcrumb').html(res);
+		}
+	});
+}
+function get_process_details(url,flag){ 
+	$('#modal_msg_box').modal('show');
+	$('#modal_msg_box').find('.modal-title').html('Process Status');
+	$("#process_listing_div").html("<img src='images/hire_candidate_loader.gif' border='0' />");  
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: url,
+		data: {cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		async: true,
+		success: function(res)
+		{    
+			if(res==0){
+				$('.'+flag).hide();
+			} 
+			$('#modal_msg_box').find('.modal-body').html(res);
+		}
+	});
+}
+function get_process_status(process_id){
+	$("#process_listing_div").html("<img src='images/hire_candidate_loader.gif' border='0' />");  
+	var url="index.php?vVmfDc0-mXQJNH-YH.15VOqu00rMPVZkQMONBQbYHrlq2ltBI3YmliQPOuEaFKszxnG7gt5XpYZP5D6TJyy2uFZpRuOHgMzyq0Ngj7fvAnrwmQYMDdy9LFUjk3GU4xi9qstpE9OcdgnzK3n2ryPiD.6jt6.qpHMisLimA45Tb7PB-onXRQdl-E7HIbp0VoWZ";	
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: url,
+		data: {process_id:process_id,cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		async: true,
+		success: function(res)
+		{   
+			$('#process_listing_div').html(res);
+		}
+	});
+}
+function get_profile_picture(){
+	var url="index.php?vVmfDc0-mXQJNH-YH.15VH74XUT-UeLHiHX6U3aWO7o.kJb.qUlu62ECMRbHoStE7D4AXPPQ-hKi0X9ztVUgBoKD6mjTH--gVJ.ZAis7BSv8hXkunX6ax13GWneKvDZUNFGLxQuXh5LBsKBZCoRq18YWoUG9NU7gLqXR5E4FYxQ_";	
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: url,
+		data: {cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		async: true,
+		success: function(res)
+		{  
+			res = jQuery.parseJSON(res);
+			var paths =res.uploaded_path+'/'+res.image_name;
+			//$('#profile_pic').attr('src',paths);
+			$('#profile_pic').html('<img src="'+paths+'" class="user-image" alt="Profile Image" width="70px">');
+			
+		}
+	});
+}
+function open_upload_profile_pic(){ 
+			$('#upload_errors_popups').modal('show');
+		$('#upload_error_header').html('Change Profile Picture');
+	}
+
+function candidate_history(){
+	var url='index.php?vVmfDc0-mXQJNH-YH.15VI.d4rhvMmgMA98zqeqCK32LoVJrmjVyA9ee4MTjy2u2OEGTNmHCXrphdsJ1S-K278LzMdZEVnAgc3pUmxp.7tqQZ7EmQatu.5j6F2XK4NsdVKzQkNH8twoJcj1XfyKJp4jAPpHohFLIBwjNxT0DXqQ_';
+	$('#form_modal_box').modal('show'); 
+	$('#form_modal_box').find('.modal-body').html("<img src='images/hire_candidate_loader.gif' border='0' />");
+	$('#form_modal_box').find('.modal-title').html('Candidate History'); 
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: url,
+		data: {cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		async: true,
+		success: function(res)
+		{   
+			$('#form_modal_box').find('.modal-body').html(res);
+		}
+	}); 
+}
+function make_suspend(){ 
+	var blk_link = 'index.php?vVmfDc0-mXQJNH-YH.15VFyTIeSeNbU6xWs4XO8di6Gros0HfntcfUR1Y6oASo4EaDJG1j9SjI-IIWHlJjvYX7JevkSk5kqryGJgOWm8OA6CT4DuJbFBYi8PQSOiC7vfigVVNfC16mU5c4J-aadlOE52s1J73w7r1Zu-kU5OxhPf9zTRcMwRmnD1VOKBaOvp';
+	$('#form_modal_box').modal('show');
+	$('#form_modal_box').find('.modal-title').html('Suspend the candidate');
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: blk_link,
+		data: {cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		async: true,
+		success: function(res)
+		{
+			$('#form_modal_box').find('.modal-body').html(res);
+		}
+	});
+}
+function make_activated(){ 
+	//$('#errors_popups_sts').modal('show'); 
+	//$('#error_header_sts').html('');
+	//$('#error_content_sts').html('');
+	//$('#error_button_sts').html("<button type='button' class='btn btn-default' data-dismiss='modal'>Cancel</button><button type='button' class='btn btn-info' onclick='candidate_activate()'>Yes</button>");
+	//$('#remarkDiv').fadeIn();
+
+	var blk_link = 'index.php?vVmfDc0-mXQJNH-YH.15VFyTIeSeNbU6xWs4XO8di6Gros0HfntcfUR1Y6oASo4EaDJG1j9SjI-IIWHlJjvYX7JevkSk5kqryGJgOWm8OA6CT4DuJbFBYi8PQSOiC7vfigVVNfC16mU5c4J-aadlOE52s1J73w7r1Zu-kU5OxhPf9zTRcMwRmnD1VOKBaOvp';
+	$('#form_modal_box').modal('show');
+	$('#form_modal_box').find('.modal-title').html('Activate the candidate');
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: blk_link,
+		data: {cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		async: true,
+		success: function(res)
+		{
+			$('#form_modal_box').find('.modal-body').html(res);
+		}
+	});
+}
+function reset_action_popup(){  
+	$('#profile_picture').val('');
+	$('#main_div_controll_sts').attr('style','width:30% !Important')
+	$("#upload_errors_popups").modal('hide');
+	$("#history_listing_div").addClass('display_none');
+	$('#errors_popups_sts').addClass('display_none');
+	$('#error_header_sts').html('');
+	$('#error_content_sts').html('');
+	$('#error_button_sts').html(''); 
+	$('#remarks_error').fadeOut();
+	$('#status_remarks').val('');
+	return false;
+}
+	$(document).ready(function(){
+	    candidate_tab_data('Offer Letter',5,'index.php?vVmfDc0-mXQJNH-YH.15VJcSFylCYJGoU99ZhEwoRrSTZ.XLGOY.D1lZ.L.Xn4VOzkn7Vz2y-SJDLjDR9VfrrXi2h4HZNAiTPIWszsgGJ2FzyiiNIhwjwOFv37nARzhX8JkGDA3cvSxVI5NxlOMYvarLaRPTnHYJ8yt59q8j4g-uo7evqqRzIrC4pgOOU2.zwf6J10UHZfxOxyG6dFaFmQ__'); 
+		$("#side_tabmenu li:first").addClass("active");
+		$(".all_inner_ul li a").removeClass('active').addClass("diactive");
+		$("#side_tabmenu li a:first").removeClass('diactive').addClass("active"); 
+		
+		$('.menu_main_li').on('click',function(){ 
+			$('#side_tabmenu li').removeClass('active');
+			$('#'+this.id).addClass('active');  
+		});	
+	});
+
+	function candidate_suspend(){  
+		if($('#status_remarks').val()!=''){
+			$('#make_suspend').html('<span class=""><i class="fa fa-spinner fa-spin"></i></span>');
+			var remarks = $('#status_remarks').val();
+			var url="index.php?vVmfDc0-mXQJNH-YH.15VM.BPZMeFPccdWz6VM5kZO.Lvdgo41xckDtGRjDPJTGafbr3vp-tSGdCsFj7NwvJOilveY.1PQWBpuxniLiELN2gWjWtPnQFAL5UfPPk.AAZRM7zOxO9cmgNLOLdlGuGfyyA.TZhePh-X.-vb80-XQw_";	
+				$.ajax({
+					type: 'POST',
+					cache: false,
+					url: url,
+					data: {remarks:remarks,cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+					async: true,
+					success: function(res)
+					{   
+						if(res==0){
+							var opts = {"closeButton": true,"debug": false,"positionClass": "toast-top-right","onclick": null,"showDuration": "300","hideDuration": "1000","timeOut": "5000","extendedTimeOut": "1000","showEasing": "swing","hideEasing": "linear","showMethod": "fadeIn","hideMethod": "fadeOut"}; 
+							toastr.error("Please enter remark", "", opts);  
+				            return false;
+						}else{
+							$('#errors_popups_sts').modal('hide'); 
+							$('#remarks_error').fadeOut();
+							$('#status_remarks').val('');
+							$('#remarkDiv').fadeOut();
+							$('#make_suspend').html('Activate<i class="fa fa-unlock-alt"></i>');
+							$('#make_suspend').attr('onclick','make_activated()');
+							$('#make_suspend').attr('id','make_activated');  
+							var opts = {"closeButton": true,"debug": false,"positionClass": "toast-top-right","onclick": null,"showDuration": "300","hideDuration": "1000","timeOut": "5000","extendedTimeOut": "1000","showEasing": "swing","hideEasing": "linear","showMethod": "fadeIn","hideMethod": "fadeOut"}; 
+							toastr.success("Candidate  Suspended Successfully", "", opts);  
+						}						
+					}
+				}); 
+		}else{
+			 var opts = {"closeButton": true,"debug": false,"positionClass": "toast-top-right","onclick": null,"showDuration": "300","hideDuration": "1000","timeOut": "5000","extendedTimeOut": "1000","showEasing": "swing","hideEasing": "linear","showMethod": "fadeIn","hideMethod": "fadeOut"}; 
+			 toastr.error("Please enter remark", "", opts); 
+             return false;
+		}
+	}
+ 
+	function candidate_activate(){ 
+		if($('#status_remarks').val()!=''){ 
+			$('#make_activated').html('<span class=""><i class="fa fa-spinner fa-spin"></i></span>');
+			var remarks = $('#status_remarks').val();
+			var url="index.php?vVmfDc0-mXQJNH-YH.15VEr9eOZ-PhYZwpHGDBQcEfUsfYtnusXT4d1m96ktzxHCtEbH4.p4YSNScDp.RWHxiiEa-Q2A0Ecf2HiwSnhOLIZf5cjFZvn2UlW-0AVgVPaWzgN4Omss1ePHvHiEErLkH6YaAUjqGhdLlhU7cnyc6fc_";	
+			$.ajax({
+				type: 'POST',
+				cache: false,
+				url: url,
+				data: {remarks:remarks,cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+				async: true,
+				success: function(res)
+				{  
+					if(res==0){
+			            $('#remarks_error').fadeIn().html('Please enter remark');
+			            setTimeout(function(){ $("#remarks_error").fadeOut(); }, 5000);
+			            return false;
+					}else{
+						$('#errors_popups_sts').modal('hide'); 
+						$('#remarks_error').fadeOut();
+						$('#remarkDiv').fadeOut();
+						$('#status_remarks').val('');
+						$('#make_activated').html('Suspend<i class="fa fa-lock"></i>');
+						$('#make_activated').attr('onclick','make_suspend()');
+						$('#make_activated').attr('id','make_suspend'); 
+						var opts = {"closeButton": true,"debug": false,"positionClass": "toast-top-right","onclick": null,"showDuration": "300","hideDuration": "1000","timeOut": "5000","extendedTimeOut": "1000","showEasing": "swing","hideEasing": "linear","showMethod": "fadeIn","hideMethod": "fadeOut"}; 
+						toastr.success("Candidate  Activated Successfully", "", opts);  
+					}
+				}
+			}); 
+		}else{
+            $('#remarks_error').fadeIn().html('Please enter remark');
+            setTimeout(function(){ $("#remarks_error").fadeOut(); }, 5000);
+            return false;
+		}
+	}
+
+	function right_container_contents(flag){
+		var url="index.php?vVmfDc0-mXQJNH-YH.15VIrWJg.aaGEzvhsEwf2RAC3-feSQMrL2LTu4M2iem9uFsl6.RKTmSqvIYmA5abw4DoJPgO4lsUFiLw9BI6ILu9.KBVU18LXqZTlzgn9pp2U4TnazUnvfDuvVm7.RTk7GE9-3NNFwzBGacPVU4oFo6.k_";	
+		$("#right_container_content").html("<img src='images/hire_candidate_loader.gif' border='0' />");
+		$.ajax({
+			type: 'POST',
+			cache: false,
+			url: url,
+			data: {flag:flag,cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+			async: true,
+			success: function(res)
+			{
+			 $('#right_container_content_bar').html(res);
+			}
+		}); 
+	}
+	var ajax_request = null;
+	function candidate_tab_data(tabName,tabID,url)
+	{
+		$('#tab_name').html(tabName);
+		$('#content_add').html(''); 
+		$("#content_add").html("<img src='images/hire_candidate_loader.gif' border='0' />");
+		ajax_request = $.ajax({
+			type: 'POST',
+			cache: false,
+			url: url,
+			data: {tabID:tabID,cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+			async: true,
+			beforeSend : function()    {           
+		        if(ajax_request != null) {
+		        	ajax_request.abort();
+		        }
+		    },
+			success: function(res)
+			{
+			 $('#content_add').html(res);
+			 $('.datepicker').datepicker({
+	             clearBtn: true,
+				 dateFormat: 'dd/mm/yyyy'
+			 });
+			}
+		}); 
+	}
+  	
+	function candidate_sub_tab_data(tabName,tabID,url,main_tab)
+	{   
+		$('.dropdown-menu').fadeOut();
+		$('#tab_name').html(tabName);
+		$(".menu_main_li ,.menu_main_li a ").removeClass("active").addClass('diactive');  
+	 
+		$("#content_add").html("<img src='images/hire_candidate_loader.gif' border='0' />");  
+		$.ajax({
+			type: 'POST',
+			cache: false,
+			url: url,
+			data: {tabID:tabID,cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+			async: true,
+			success: function(res)
+			{
+				$('#'+main_tab+'_tab').removeClass('diactive').addClass("active");
+				$('#a_tab_'+main_tab).removeClass('diactive').addClass("active"); 	
+			 	$('#content_add').html(res);
+			 	 $('.datepicker').datepicker({
+	                clearBtn: true,
+			 		dateFormat: 'dd/mm/yyyy'
+				 });
+			}
+		}); 
+	}   
+ 
+function back(url)
+{
+	document.location = url;
+}
+
+//Murugan  added here
+//creates markup for a new popup. Adds the id to popups array.
+var busy = false;
+var limit = 5;
+var offset = 0;
+var lastScrollTop = 0;
+function chat_box_popup(id, name, url_chat)
+{
+   for(var i = 0; i < popups.length; i++)
+   {   
+	      //already registered. Bring it to front.
+	      if(id == popups[i])
+	      {
+	         Array.remove(popups, i);
+	         popups.unshift(id);
+	         calculate_popups();
+	         return;
+	       }
+   }   
+   $.ajax({
+		type: 'POST',
+		cache: false,
+		url: url_chat,
+		data: {chat_box_id:id,chat_box_name:name,cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		async: true,
+		success: function(res)
+		{
+		     document.getElementsByTagName("section")[0].innerHTML = document.getElementsByTagName("section")[0].innerHTML + res;  
+		     popups.unshift(id);
+		     calculate_popups();
+		}
+	});  
+}
+function Chat () {
+    this.update = updateChat;
+    this.send = sendChat;
+}
+function sendChat(message, submit_uri) { 
+	if(message !='')
+	{
+	$.ajax({
+		type: "POST",
+		url: submit_uri,
+		data: {'chatflag': 'candidate_chat','function': 'send','message': message,query_visible_notify:1,cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+		success: function(data){
+			var custom_div_id = '';
+			updateChat(0, 5, data, custom_div_id);
+			//displayRecords(0, 5, data, custom_div_id);
+		}
+	});
+	}
+}
+
+function updateChat(lim, off, data, custom_div_id) {
+		$.ajax({
+			type: "POST",
+			url: data,
+			data: {'limit':lim,'offset':off,'scroll_query':'scroll','function': 'update',cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+			success: function(data) {
+				//$("body").find(".messages").html(data);
+				 if(data)
+	 	  		 {
+	 				 var json = $.parseJSON(data);
+	 				 var jsonData = '';
+	 				 for (var i=0;i<json.length;++i)
+	 		         {
+	 	  		   		var jsonData = '<li class="message '+json[i].message_shift+' appeared li_padding" style="border-bottom: aliceblue !important;"><div class="avatar"><img src="'+json[i].profile_pic+'" alt="Profile Image"  style="width:30px; height:30px" alt="" class="img-circle profile-img-view '+json[i].get_sender_img+'"></div><div class="text_wrapper"><div style="font-weight: 700;color: #000000b3;margin-bottom: 4px;font-size: 11px;">'+json[i].name+'</div><div class="text">'+json[i].query_body+'</div></div></li>';
+	 	  		   		$("body").find(".messages").append(jsonData);
+	 	  		   		$('.no_query_found').hide();
+	 	  	  		 }				  
+				  }				  ;
+				$('.messages').css("overflow-y", "scroll");
+				var log = $('.dropdown_chat_box');
+				log.animate({ scrollTop: log.prop('scrollHeight')}, 10);
+			}
+		});
+}
+function update_read_status(url_query) {
+		if(!$("body").find(".open").length)
+		{	
+		$.ajax({
+			type: "POST",
+			url: url_query,
+			data: {cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+			success: function(data) {
+				$('.read_count_de').hide();
+			}
+		});
+		var scroll_uri 	= '?NENQFAN6q12hOKu4m0h2y6LbCCWxGSPFB4Izh7EI75Q.7OheTp8y0P60Uh8.WDa7wbCVgQMySaFwxFgihiOSZTlYF1cr.r4R0KDZp6wUngC4jm7uwV8g2K-gknqLK67q5Nr0uyTCO-fFJ2S7AaTkTKq0THZsdqPzBHfawR4vlyvRksWRwxIwz.xh7CTAl4zH9onWhEWN9JkEEmLbsRKgZcLzMdZEVnAgc3pUmxp.7tqQZ7EmQatu.5j6F2XK4NsdVKzQkNH8twoJcj1XfyKJp4jAPpHohFLIBwjNxT0DXqQ_';
+		var append_div_id = 'append_query_list';
+		displayRecords(0, 5, scroll_uri, append_div_id , 'load_window');
+		}
+		
+}
+var chat =  new Chat();
+function submit_query(submit_uri)
+ {
+        	var text = $('.sendie').val();
+    		var maxLength = $('.sendie').attr("maxlength");
+            var length = text.length;  
+             if (length <= maxLength + 1) { 
+                 
+    		        chat.send(text, submit_uri);	
+    		        $('.sendie').val("");
+    		        
+             } else {
+             
+    				$(this).val(text.substring(0, maxLength));
+    				
+    			}	
+}
+        $( document ).ready(function() {
+    		 // watch textarea for key presses
+            	 $('body').on('keydown', '.sendie', function(event){                    		 
+                 var key = event.which;  
+           
+                 //all keys including return.  
+                 if (key >= 50) {		
+                     var maxLength = $(this).attr("maxlength");  
+                     var length = this.value.length;                      
+                     // don't allow new content if length is maxed out
+                     if (length >= maxLength) {  
+                         event.preventDefault();  
+                     }  
+                  } 
+			});   
+    	});        
+ //End here
+    </script>	
+<script type="text/javascript">
+function scrollQuery(scroll_uri,append_div_id)
+{
+		if($('.append_query_list').scrollTop() == 0) {
+			busy = true;
+		  	offset = limit + offset;
+		  	console.log(limit);
+		  	displayRecords(limit, offset, scroll_uri, append_div_id, 'scroll_window');
+		} 
+	    var st = $('.append_query_list').scrollTop();
+	    lastScrollTop = st;
+}
+
+	function displayRecords(lim, off , scroll_uri, append_div_id, action_window) {
+		console.log(off);
+        $.ajax({
+          type: "POST",
+          async: false,
+          url: scroll_uri,
+          datatype:'JSON',
+          data: {'limit':lim,'offset':off,'scroll_query':'scroll',cryptname: '5bcebe96083ecaaf980bff1baacffbc8' },
+          cache: false,
+          beforeSend: function(){
+  			$("."+append_div_id).html("<img src='images/hire_candidate_loader.gif' id='loader_image' border='0' style='width: 60px;margin-top: 23px;position: relative;left: 43%;top: 40%;' />");
+  		   },
+          success: function(data) {  
+        	 $('#loader_image').hide();				 	   	
+  			 if(data)
+  	  		 {
+  				 var json = $.parseJSON(data);
+  				 var jsonData = '';
+  				 for (var i=0;i<json.length;++i)
+  		         {
+  	  		   		var jsonData = '<li class="no_query_found_div message '+json[i].message_shift+' appeared li_padding" style="border-bottom: aliceblue !important;"><div class="avatar"><img src="'+json[i].profile_pic+'" alt="Profile Image"  style="width:30px; height:30px" alt="" class="img-circle profile-img-view '+json[i].get_sender_img+'"></div><div class="text_wrapper"><div style="font-weight: 700;color: #000000b3;margin-bottom: 4px;font-size: 11px;">'+json[i].name+'</div><div class="text">'+json[i].query_body+'</div></div></li>';
+					$("body").find(".messages").append(jsonData);
+					$('.no_query_found').hide();
+  	  	  		 }				  
+			  }
+  			  else
+	  			 {
+  					
+	  			 }	
+  			
+  			  if($("body").find(".no_query_found_div").length)
+			  {	
+			 	  $('.messages').css("overflow-y", "scroll");          
+			 	  window.busy = false;  	  			 		          			
+			  }	
+  			  else
+  			  {  				 
+  				  $("body").find(".messages").append('<div class="no_query_found" style="text-align:center;margin-top:100px;">No Record Found</div>');
+  				  $('.no_query_found').show();
+  	  		  } 	  		  
+	          if(action_window == 'scroll_window')
+	          {
+	            $("body").find(".messages").animate({
+	            //scrollTop: $("body").find(".messages").offset().top - 0
+	            }, 'slow');
+			   }	
+          }
+        });
+}
+
+$(document).ready(function() {
+	if (busy == false) {
+	  busy = true;
+	  var scroll_uri 	= '?NENQFAN6q12hOKu4m0h2y6LbCCWxGSPFB4Izh7EI75Q.7OheTp8y0P60Uh8.WDa7wbCVgQMySaFwxFgihiOSZTlYF1cr.r4R0KDZp6wUngC4jm7uwV8g2K-gknqLK67q5Nr0uyTCO-fFJ2S7AaTkTKq0THZsdqPzBHfawR4vlyvRksWRwxIwz.xh7CTAl4zH9onWhEWN9JkEEmLbsRKgZcLzMdZEVnAgc3pUmxp.7tqQZ7EmQatu.5j6F2XK4NsdVKzQkNH8twoJcj1XfyKJp4jAPpHohFLIBwjNxT0DXqQ_';
+	  var append_div_id = 'append_query_list';
+	  displayRecords(limit, offset, scroll_uri, append_div_id, 'load_window');
+	}
+
+	var data_url = "index.php?NENQFAN6q12hOKu4m0h2y23uD4zlyF16tEyYMsjdO.knYBjCG1Cv-66sYITytYmjQi6ecJzxqxSB4R0Ca1xBefBx8px8znEKFiHUqms07dqAMuSEn2Tf87XldbT16M-4yVqB5PeyHE3WLajN3ihiKRbgixHgEy1Ouw-7jbOnvv8_";
+	$(".search-query").autocomplete({
+		position: { my: "left bottom", at: "left top", collision: "flip" },
+        source: function(request, response) {
+            $.ajax({
+            	type: "POST",
+                url: data_url,
+                dataType: "json",
+                data: {
+                    term : request.term,
+                    query : $(".search-query").val(),
+                    cryptname: '5bcebe96083ecaaf980bff1baacffbc8'
+                },
+                success: function(data) {
+                    response(data);
+                },
+            });
+        },
+        open: function () { $('ul.ui-autocomplete').addClass('opened') },
+        close: function () { 
+          $('ul.ui-autocomplete')
+            .removeClass('opened')
+            .css('display','block'); 
+        },
+        _renderItem: function (ul, item) {
+            var regexp = new RegExp('(' + this.term + ')', 'gi'),
+                classString = this.options.HighlightClass ?  ' class="' + this.options.highlightClass + '"' : '',
+                label = item.label.replace(regexp, '<span' + classString + '>$1</span>');
+
+            return $('<li><a href="#">' + label + '</a></li>').appendTo(ul);
+        },
+        highlight: true,
+        min_length: 1,
+        selectFirst  : true,
+        matchContains: true,
+        scroll       : true,
+        delay: 300
+    });
+	$('body').on('click', '.ui-autocomplete li a', function(event){
+		setTimeout(function(){
+			$('.auto_drod_down_li').addClass("open");
+			$(".auto_drod_down_a").attr("aria-expanded","true");
+	     }, 5);			
+	});
+	});
+	$('body').on('click', '.append_query_list', function(event){
+		setTimeout(function(){
+			$('.auto_drod_down_li').addClass("open");
+			$(".auto_drod_down_a").attr("aria-expanded","true");
+	     }, 5);			
+	});
+</script>
+
+   			</div>
+			<div class="row">
+				<footer class="main clear">	
+					<div class="row">	
+						<div class="col-md-12" style="color: #000; font-size: 11px; ">
+							
+							<span style="color: #003471;"> Power By </span>
+							<a target="_blank" href="http://www.ascent-online.com/">
+								<img class="responsive-img align_img" src="./Candidate Dashboard_files/logo-small-ascent-white.png">
+							</a>
+							&nbsp;&nbsp;|&nbsp;&nbsp;
+							<a target="_blank" href="http://www.ascent-online.com/privacy-policy" style="margin-top: 3px; text-decoration:underline;">Privacy Policy</a>
+							&nbsp;&nbsp;
+						</div>
+					</div>						
+				</footer>	
+			</div>		
+		</div>	
+	</div>
+	
+	<!-- Bottom scripts (common) -->
+	<script src="./Candidate Dashboard_files/TweenMax.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/jquery-ui-1.10.3.minimal.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/bootstrap.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/joinable.js.download"></script>
+	<script src="./Candidate Dashboard_files/resizeable.js.download"></script>
+	<script src="./Candidate Dashboard_files/neon-api.js.download"></script>
+	<script src="./Candidate Dashboard_files/neon-mail.js.download"></script>
+	<!-- Imported scripts on this page -->	
+	<script src="./Candidate Dashboard_files/jquery.bootstrap.wizard.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/select2.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/bootstrap-tagsinput.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/typeahead.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/jquery.selectBoxIt.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/bootstrap-datepicker.js.download"></script>
+	<script src="./Candidate Dashboard_files/bootstrap-timepicker.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/bootstrap-colorpicker.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/moment.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/daterangepicker.js.download"></script>	
+	<script src="./Candidate Dashboard_files/bootstrap-switch.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/jquery.validate.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/jquery.inputmask.bundle.js.download"></script>
+	<script src="./Candidate Dashboard_files/fileinput.js.download"></script>
+	<script src="./Candidate Dashboard_files/responsive-tables.js.download"></script>
+	<script src="./Candidate Dashboard_files/jquery.nestable.js.download"></script>
+	<script src="./Candidate Dashboard_files/toastr.js.download"></script>
+	<script src="./Candidate Dashboard_files/jquery.tocify.min.js.download"></script>
+	<script src="./Candidate Dashboard_files/general.js.download"></script>
+		<!-- JavaScripts initializations and stuff -->
+	<script src="./Candidate Dashboard_files/neon-custom.js.download"></script>
+	
+	
+
+
+ <script type="text/javascript">
+
+ 	$(document).ready(function()
+	{
+
+ 		$(document).on('show.bs.modal', '.modal', function (event) {
+            var zIndex = 1040 + (10 * $('.modal:visible').length);
+            $(this).css('z-index', zIndex);
+            setTimeout(function() {
+                $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+            }, 0);
+        });
+ 		
+ 		var collapse_status = '0';
+ 		if(parseInt(collapse_status) == 1)
+ 		{
+ 			toggle_sidebar_menu();
+ 		}
+ 		
+		
+	});
+	
+ 	$(document).ajaxComplete(function(){
+ 		replaceCheckboxes();
+	    $('.selectboxit').addClass('visible').selectBoxIt();	
+ 	});
+ 	
+ 	function handleToastrSettings (closeButton, positionClass, sticky, type, title, notification) 
+	{		
+		closeButton = (closeButton !=false) ? true : false;
+		positionClass = (!positionClass) ? 'toast-top-right' : positionClass;
+		sticky = (sticky !=true) ? timeOut = 5000 : timeOut = 0;
+			
+		if(!title){
+			title = '';
+		}
+		if(!notification){
+			notification = 'Sample Notification';
+		}
+		
+		var opts = {
+			"closeButton": closeButton,
+			"debug": false,
+			"positionClass": positionClass,
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": timeOut,
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		};
+
+		if(type === 'success') {			
+			toastr.success(notification, title, opts);
+		} else if(type === 'warning') {			
+			toastr.warning(notification, title, opts);
+		} else if(type === 'error') {			
+			toastr.error(notification, title, opts);
+		} else {			
+			toastr.info(notification, title, opts);
+		}
+	}
+	</script>
+	<script type="text/javascript">
+
+	  var yes ="yes";
+	  applyajax();
+	  var ajax_request = null;
+	  function applyajax() {
+	  	$("a.ajax_link").click(function() {
+	  	  	var url = $(this).attr("href");
+	  		ajax_request = $.ajax({
+		  	    type: "POST",
+		  	    data: {
+		  	    	ajax:yes,
+		  	  		cryptname: '5bcebe96083ecaaf980bff1baacffbc8'
+			  	},
+		  	    url: url,
+		  	    beforeSend: function() {
+		  			$("#pager_left").show();
+		  			if(ajax_request != null) {
+			        	ajax_request.abort();
+			        }
+		  	    },
+		  	    success: function(msg) {
+		  			$("#content").html("");  	  		
+		  	      	$("#content").html(msg);
+				  	$("#pager_left").hide();
+		  	      	applyajax();
+		  	    }
+	  	  	});
+	  	  	return false;
+	  	});
+	  }; 
+
+	</script>
+    <!-- Custom Theme Scripts -->
+   
+    <div class="modal fade" id="modal_msg_box" data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title"></h4>
+				</div>
+				<div class="modal-body">
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="msgbox_modal_ok" class="btn btn-info" data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="modal_confirm_box">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title"></h4>
+				</div>
+				<div class="modal-body"> </div>
+				<div class="modal-footer">
+					<button type="button" id="cnfbox_modal_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" id="cnfbox_modal_ok" class="btn btn-info">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="form_modal_box">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title"></h4>
+				</div>
+				<div class="modal-body">
+
+				</div>
+				
+			</div>
+		</div>
+	</div>
+ <ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="z-index: 1001; display: none;"></ul></body></html>
